@@ -1,2 +1,2 @@
-# Python-AIML
+# Python
 i was making This repo for learning AIML
