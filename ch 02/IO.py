@@ -9,3 +9,6 @@ print("number 1 is " + a)
 print("number 2 is " + b)
 
 print(float(a) + float(b)) # typecasting string to float
+
+
+# in the python input function always return a string data type so we need to typecast it to the desired data type before performing any operations on it.
