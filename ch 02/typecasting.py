@@ -8,3 +8,9 @@
 a = 10
 b = float(a) # explicit typecasting
 print(type(a) , type(b))
+
+a = int(input("enter a number :"))
+print(type(a))
+b = int(input("enter a number :"))
+print(type(b))
+print(a+b)
