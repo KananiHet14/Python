@@ -19,3 +19,13 @@ print(name_sliced) # slicing the string from index 0 to 5
 
 
 # negrative indexing : negative indexing can also used as shown in figure above. -1 corresponds to the (length - 1) index , -2 to (length - 2).
+#  if there any black of index then it will be considered as length.
+# example
+print(name[1:]) # is same as print(name[1:5])
+print(name[1:6])
+
+
+# slicing withskip value : we can provide a skip values as a part of slicing like by using step value.
+
+word = "amazing"
+print(word[1:6:2]) #2 is like it print the character one leave and then print leaved after character and so on. it is called step value.
