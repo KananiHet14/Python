@@ -15,3 +15,4 @@ print(marks["maths"])
 print(marks["chemistry"])
 
 
+# unordered, mutable, indexed, no duplicate keys
