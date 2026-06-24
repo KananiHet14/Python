@@ -39,3 +39,9 @@ def pattern(n):
 pattern(5)
 """
 
+# inch to cm
+def inch_to_cm(inch):
+    return inch * 2.54
+
+inch = int(input("Enter length in inches: "))
+print(inch_to_cm(inch))
