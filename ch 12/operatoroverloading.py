@@ -5,7 +5,23 @@ class Number:
     def __add__(self , num):
         return self.n + num.n
     
-n = Number(int(input("enter number 1")))
-m = Number(int(input("enter number 2")))
+    def __mul__(self , num):
+        return self.n - num.n
+    
+    def __sub__(self , num):
+        return self.n * num.n
+    
+    def __truediv__(self , num):
+        return self.n / num.n
+    
+    def __floordiv__(self , num):
+        return self.n // num.n
+    
+n = Number(int(input("enter number 1 : ")))
+m = Number(int(input("enter number 2 : ")))
 
 print(n+m)
+print(n-m)
+print(n*m)
+print(n/m)
+print(n//m)
