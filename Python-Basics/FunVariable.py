@@ -7,7 +7,8 @@
 # print(*object) = means print take any object and print it on the screen
 # print(sep=' ') = sep means saperator , sep used to saperate the objecct with space or any other character.
 # print(end='\n') = \n means new line ,  end used to print the next object in new line.
-
+# \\ = the words between the backslash used to escaping
+# print(f"hello {name} !") = f string is a string 
 """
 
 name = input("enter you name : ")
