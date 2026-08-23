@@ -13,6 +13,15 @@
 # string.upper() = its a method that is used to convert the string to uppercase.
 # string.lower() = its a method that is used to convert the string to lowercase.
 # string.split() = its a method that is used to split the string into a list of substrings.
+# int(input()) = its a function that used for type casting the input value because input value is defaltly in a string type. you can also do it by float , etc...
+# Arithmatic Operators = + , - , * , / , % , // , ** used to perfeom calculation work
+# relational Operators = == , != , > , < , >= , <= used to compare the values
+# logical Operators = and , or , not used to combine the conditions
+# Assignment Operators = = , += , -= , *= , /= , %= , //= , **= used to assign the value to a variable and change it if.
+# Ternary Operators = a if condition else b used to assign the value to a variable based on a condition.
+# Identity Operators = is , is not used to compare the memory location of two objects.
+# bitwise Operators = & , | , ^ , ~ , << , >> used to perform bitwise operations on integers.
+
 """
 
 # name = input("enter you name : ")
@@ -33,4 +42,66 @@
 # print(name.split("-"))
 
 
-# Operators
+# Setup
+# x = int(input("Enter number 1: "))
+# y = int(input("Enter number 2: "))
+
+# # Arithmetic Operators (+, -, *, /, %)
+# print("\n--- Arithmetic Operators ---")
+# print(f"{x} + {y} = {x + y}")
+# print(f"{x} - {y} = {x - y}")
+# print(f"{x} * {y} = {x * y}")
+# print(f"{x} / {y} = {x / y}")
+# print(f"{x} % {y} = {x % y}")
+
+# # Relational Operators (<, <=, >, >=, ==, !=)
+# print("\n--- Relational Operators ---")
+# print(f"{x} < {y} : {x < y}")
+# print(f"{x} <= {y} : {x <= y}")
+# print(f"{x} > {y} : {x > y}")
+# print(f"{x} >= {y} : {x >= y}")
+# print(f"{x} == {y} : {x == y}")
+# print(f"{x} != {y} : {x != y}")
+
+# # Logical Operators (and, or, not)
+# print("\n--- Logical Operators ---")
+# print(f"({x} > 0) and ({y} > 0) : {(x > 0) and (y > 0)}")
+# print(f"({x} > 0) or ({y} > 0) : {(x > 0) or (y > 0)}")
+# print(f"not ({x} > 0) : {not (x > 0)}")
+
+# # Bitwise Operators (&, |, ^, ~, <<, >>)
+# print("\n--- Bitwise Operators ---")
+# print(f"{x} & {y} = {x & y}")
+# print(f"{x} | {y} = {x | y}")
+# print(f"{x} ^ {y} = {x ^ y}")
+# print(f"~{x} = {~x}")
+# print(f"{x} << 1 = {x << 1}")
+# print(f"{x} >> 1 = {x >> 1}")
+
+# Assignment Operators (=, +=, -=, *=, %=)
+# print("\n--- Assignment Operators ---")
+# a = x  # =
+# print(f"a = {a}")
+# a += y # +=
+# print(f"a += {y} -> {a}")
+# a -= y # -=
+# print(f"a -= {y} -> {a}")
+# a *= y # *=
+# print(f"a *= {y} -> {a}")
+# a %= y # %= (Note: y cannot be 0 here)
+# print(f"a %= {y} -> {a}")
+
+# Ternary Operator (x if condition else y)
+# print("\n--- Ternary Operator ---")
+# ternary_result = x if x > y else y
+# print(f"The larger number is: {ternary_result}")
+
+# Identity Operators (is, is not)
+# print("\n--- Identity Operators ---")
+# Using lists to properly demonstrate identity in memory
+# list1 = [x, y]
+# list2 = [x, y]
+# list3 = list1
+
+# print(f"list1 is list3 : {list1 is list3}")
+# print(f"list1 is not list2 : {list1 is not list2}")
