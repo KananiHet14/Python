@@ -21,6 +21,7 @@
 # Ternary Operators = a if condition else b used to assign the value to a variable based on a condition.
 # Identity Operators = is , is not used to compare the memory location of two objects.
 # bitwise Operators = & , | , ^ , ~ , << , >> used to perform bitwise operations on integers.
+# round(number[,ndigits]) = its a python inbuilt function that is used to round the number to nearest integer and also you can specified it for precision by using ndigits parameter.   
 
 """
 
@@ -105,3 +106,8 @@
 
 # print(f"list1 is list3 : {list1 is list3}")
 # print(f"list1 is not list2 : {list1 is not list2}")
+
+# Round function
+# number = 9.5675
+
+# print(round(number))
