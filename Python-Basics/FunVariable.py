@@ -22,7 +22,8 @@
 # Identity Operators = is , is not used to compare the memory location of two objects.
 # bitwise Operators = & , | , ^ , ~ , << , >> used to perform bitwise operations on integers.
 # round(number[,ndigits]) = its a python inbuilt function that is used to round the number to nearest integer and also you can specified it for precision by using ndigits parameter.   
-
+# def is the kywords that used to define functions in python
+# return is also keyword that used to return the value from the function to the caller.
 """
 
 # name = input("enter you name : ")
@@ -111,3 +112,20 @@
 # number = 9.5675
 
 # print(round(number))
+
+
+# Function and Methods
+# def hello(to = "world"):
+#     print(f"hello ,  {to} !")
+
+# hello()
+
+
+def main():
+    name = input("Enter your name: ")
+    hello(name)
+
+def hello(to="world"):
+    print("hello , " , to)
+
+main()
