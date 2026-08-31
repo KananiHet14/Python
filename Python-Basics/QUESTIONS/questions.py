@@ -10,30 +10,35 @@
 
 # question1()
 
-def questions2():
-    price = float(input("Enter Billing Price : "))
-    if price >= 1000:
-        member_input = input("Enter True if you are member Other wise enter false : ").strip().lower()
-        coupon_input = input("Enter True if you have coupon Other wise enter false : ").strip().lower()
 
-        member = (member_input == 'true')
-        coupon = (coupon_input == 'true')
+# Question 2
 
-        if member and coupon:
-            price = round((price * 0.80) - 50, 2)
-            print(f"your total bill is {price} because you are member and you have coupon")
-        elif member or coupon:
-            price = round((price * 0.90) - 20, 2)
-            print(f"your total bill is {price} because you are either member or you have coupon")
-        else:
-            price = round(price * 0.90, 2)
-            print(f"your total bill is {price} because you are not member and you have not coupon")
-    elif 1 <= price <= 999:
-        price = round(price * 0.90, 2)
-        print(f"Your total bill is {price} (10% discount applied).")
-    elif price <= 0:
-            print("You entered 0 or a negative number, which is not acceptable.")
-    else:
-        return
+# def questions2():
+#     price = float(input("Enter Billing Price : "))
+#     if price >= 1000:
+#         member_input = input("Enter True if you are member Other wise enter false : ").strip().lower()
+#         coupon_input = input("Enter True if you have coupon Other wise enter false : ").strip().lower()
 
-questions2()
+#         member = (member_input == 'true')
+#         coupon = (coupon_input == 'true')
+
+#         if member and coupon:
+#             price = round((price * 0.80) - 50, 2)
+#             print(f"your total bill is {price} because you are member and you have coupon")
+#         elif member or coupon:
+#             price = round((price * 0.90) - 20, 2)
+#             print(f"your total bill is {price} because you are either member or you have coupon")
+#         else:
+#             price = round(price * 0.90, 2)
+#             print(f"your total bill is {price} because you are not member and you have not coupon")
+#     elif 1 <= price <= 999:
+#         price = round(price * 0.90, 2)
+#         print(f"Your total bill is {price} (10% discount applied).")
+#     elif price <= 0:
+#             print("You entered 0 or a negative number, which is not acceptable.")
+#     else:
+#         return
+
+# questions2()
+
+
