@@ -41,34 +41,36 @@
 
 # questions2()
 
+# question 3
 
-def question3():
-    # 1. Get Inputs safely (use .lower() on the 3D check so "true" or "True" both work)
-    age = int(input("Enter your Age : "))
-    time_of_day = input("Enter time of day afternoon or evening : ").strip().lower()
-    view_input = input("Enter True if you go with 3D wise enter false : ").strip().lower()
-    
-    is_3d = (view_input == 'true')
-    
-    # 2. STARTING STATE
-    price = 12
-    
-    # 3. STEP 1: Apply Age Rules (Overrides the starting price)
-    if age < 12:
-        price = 8
-    elif age >= 65:
-        price = 9
-        
-    # 4. STEP 2: Apply Time Rules (Modifies the current price)
-    if time_of_day == "afternoon":
-        price -= 2
-        
-    # 5. STEP 3: Apply 3D Rules (Modifies the current price)
-    if is_3d: # This is the same as writing 'if is_3d == True:'
-        price += 3
-        
-    # 6. Print EXACTLY ONCE at the very end
-    print(f"Your ticket price is {price} RS")
 
-# Run the function
-question3()
+# def question3():
+#     # 1. Get Inputs safely (use .lower() on the 3D check so "true" or "True" both work)
+#     age = int(input("Enter your Age : "))
+#     time_of_day = input("Enter time of day afternoon or evening : ").strip().lower()
+#     view_input = input("Enter True if you go with 3D wise enter false : ").strip().lower()
+    
+#     is_3d = (view_input == 'true')
+    
+#     # 2. STARTING STATE
+#     price = 12
+    
+#     # 3. STEP 1: Apply Age Rules (Overrides the starting price)
+#     if age < 12:
+#         price = 8
+#     elif age >= 65:
+#         price = 9
+        
+#     # 4. STEP 2: Apply Time Rules (Modifies the current price)
+#     if time_of_day == "afternoon":
+#         price -= 2
+        
+#     # 5. STEP 3: Apply 3D Rules (Modifies the current price)
+#     if is_3d: # This is the same as writing 'if is_3d == True:'
+#         price += 3
+        
+#     # 6. Print EXACTLY ONCE at the very end
+#     print(f"Your ticket price is {price} RS")
+
+# # Run the function
+# question3()
