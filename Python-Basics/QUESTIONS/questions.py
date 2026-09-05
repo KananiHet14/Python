@@ -78,30 +78,30 @@
 
 # question 4
 
-# def question4():
-#     # 1. get inputs
-#     distance = float(input("Enter the distance : "))
-#     weather = input("Enter the current weather : ").strip().lower()
-#     rush = input("Enter True id its rush hour otherwise enter False : ").strip().lower()
+def question4():
+    # 1. get inputs
+    distance = float(input("Enter the distance : "))
+    weather = input("Enter the current weather : ").strip().lower()
+    rush = input("Enter True id its rush hour otherwise enter False : ").strip().lower()
 
-#     # variables
-#     is_rushHour = (rush == 'true')
-#     base_far = 5
-#     total_fare = float(5 + (distance * 2))
+    # variables
+    is_rushHour = (rush == 'true')
+    base_far = 5
+    total_fare = float(5 + (distance * 2))
 
-#     # apply distance rules
-#     if weather == "rainy":
-#         total_fare += 3
-#     elif weather == "snowy":
-#         total_fare *=  1.2
-#     else:
-#         total_fare += 0
+    # apply distance rules
+    if weather == "rainy":
+        total_fare += 3
+    elif weather == "snowy":
+        total_fare *=  1.2
+    else:
+        total_fare += 0
 
-#     # apply rush hour rules
-#     if is_rushHour:
-#         total_fare *= 1.5
+    # apply rush hour rules
+    if is_rushHour:
+        total_fare *= 1.5
 
-#     print(f"your ride cost is {total_fare:.2f} rs because you travel {distance} km \n and the surrent wather is {weather} and there is rush hour {is_rushHour}")
+    print(f"your ride cost is {total_fare:.2f} rs because you travel {distance} km \n and the surrent wather is {weather} and there is rush hour {is_rushHour}")
     
 
-# question4()
+question4()
