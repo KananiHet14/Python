@@ -135,30 +135,30 @@
 
 # question 6
 
-def question6():
+# def question6():
 
-    # varibales
-    turns = 0
-    current_heat = int(input("Enter the current heat : "))
-    target_heat = int(input("Enter the target heat : "))
+#     # varibales
+#     turns = 0
+#     current_heat = int(input("Enter the current heat : "))
+#     target_heat = int(input("Enter the target heat : "))
 
-    # loop with conditions adn addition
-    while current_heat < target_heat:
-        if(current_heat % 2 == 0):
-            current_heat += 2
-        else:
-            current_heat += 3
+#     # loop with conditions adn addition
+#     while current_heat < target_heat:
+#         if(current_heat % 2 == 0):
+#             current_heat += 2
+#         else:
+#             current_heat += 3
 
-        turns += 1
+#         turns += 1
 
-    # output conditions
-    if turns == 0:
-        print("Already at to the target heat !")
-    elif turns in range(1 , 6):
-        print("fast brew !")
-    elif turns in range(6 , 11):
-        print("normal brew !")
-    else:
-        print("slow brew")
+#     # output conditions
+#     if turns == 0:
+#         print("Already at to the target heat !")
+#     elif turns in range(1 , 6):
+#         print("fast brew !")
+#     elif turns in range(6 , 11):
+#         print("normal brew !")
+#     else:
+#         print("slow brew")
 
-question6()
+# question6()
