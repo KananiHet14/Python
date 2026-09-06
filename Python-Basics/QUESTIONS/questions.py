@@ -105,3 +105,31 @@
     
 
 # question4()
+
+
+
+# question 5
+
+# def question5():
+#     # variables
+#     current_position = 0
+#     jump_count = 0
+    
+#     target_distance = float(input("Enter the target distance : "))
+#     jump_length = float(input("Enter the jump length : "))
+
+#     # counting
+#     while current_position < target_distance:
+#         current_position += jump_length
+#         jump_count += 1 
+
+#     # conditions
+#     if jump_count in range (1,6):
+#         print("you won gold medal")
+#     elif jump_count in range(6 , 11):
+#         print("you won silver medal")
+#     else:
+#         print("you won bronze medal")
+
+# question5()
+
