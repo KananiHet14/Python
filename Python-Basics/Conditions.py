@@ -46,67 +46,86 @@ x   y   f
 
 # if
 
-a  = int(input("enter the numbher : "))
-if (a < 5):
-    print("its just example of if condition") # break
-if (a > 5):
-    print("its just example of if condition") # execute
+# a  = int(input("enter the numbher : "))
+# if (a < 5):
+#     print("its just example of if condition") # break
+# if (a > 5):
+#     print("its just example of if condition") # execute
 
 
 
-# elif
+# # elif
 
 
-if(a < 5):
-    print("greater")
-elif(a > 5):
-    print("lesser")
-elif(a == 5):
-    print("equal")
-else:
-    print("negative number")
+# if(a < 5):
+#     print("greater")
+# elif(a > 5):
+#     print("lesser")
+# elif(a == 5):
+#     print("equal")
+# else:
+#     print("negative number")
 
 
-x = 5 # Binary: 0101
-y = 2 # Binary: 0010
+# x = 5 # Binary: 0101
+# y = 2 # Binary: 0010
 
-# Logical Operators
+# # Logical Operators
 
-if (x > 0 and y > 0):
-    print("Both x and y are positive, making the combined statement True.") # execute - Logical AND
-if (x > 0 or y < 0):
-    print("x is positive, so it evaluates to True regardless of y's value.") # execute - Logical OR
-if (not (x == y)):
-    print("x is not equal to y, so the inverted result becomes True.") # execute - Logical NOT
+# if (x > 0 and y > 0):
+#     print("Both x and y are positive, making the combined statement True.") # execute - Logical AND
+# if (x > 0 or y < 0):
+#     print("x is positive, so it evaluates to True regardless of y's value.") # execute - Logical OR
+# if (not (x == y)):
+#     print("x is not equal to y, so the inverted result becomes True.") # execute - Logical NOT
 
-# Bitwise Operators
+# # Bitwise Operators
 
-if (x & y):
-    print("5 & 2 results in 0 (binary 0000), which evaluates as False.") # break - Bitwise AND
-if (x | y):
-    print("5 | 2 results in 7 (binary 0111), which evaluates as True.") # execute - Bitwise OR
-if (x ^ y):
-    print("5 ^ 2 results in 7 because the bits differ, evaluating as True.") # execute - Bitwise XOR
-if (~x):
-    print("~5 results in -6, and since it is not zero, it evaluates as True.") # execute - Bitwise NOT
-if (x << y):
-    print("Shifting 5 left by 2 positions yields 20, evaluating as True.") # execute - Bitwise Left Shift
-if (x >> y):
-    print("Shifting 5 right by 2 positions yields 1, evaluating as True.") # execute - Bitwise Right Shift
-
-
-# elif
+# if (x & y):
+#     print("5 & 2 results in 0 (binary 0000), which evaluates as False.") # break - Bitwise AND
+# if (x | y):
+#     print("5 | 2 results in 7 (binary 0111), which evaluates as True.") # execute - Bitwise OR
+# if (x ^ y):
+#     print("5 ^ 2 results in 7 because the bits differ, evaluating as True.") # execute - Bitwise XOR
+# if (~x):
+#     print("~5 results in -6, and since it is not zero, it evaluates as True.") # execute - Bitwise NOT
+# if (x << y):
+#     print("Shifting 5 left by 2 positions yields 20, evaluating as True.") # execute - Bitwise Left Shift
+# if (x >> y):
+#     print("Shifting 5 right by 2 positions yields 1, evaluating as True.") # execute - Bitwise Right Shift
 
 
-if (x & y):
-    print("Bitwise AND yields 0, so this condition fails and is skipped.") # break - Bitwise AND
-elif (x == 5 and y == 2):
-    print("Both exact values match, successfully triggering this execution.") # execute - Logical AND operator
-elif (x | y):
-    print("Bitwise OR yields 7, but it won't run because the elif above caught it.") # break - Bitwise OR
-elif (not (x > y)):
-    print("x is greater than y, so NOT makes it False and it is skipped.") # break - Logical NOT
-elif (x << 1):
-    print("Left shift yields 10, but is skipped due to an earlier match.") # break - Bitwise Left Shift
-else:
-    print("No conditions were met.") # Default fallback
+# # elif
+
+
+# if (x & y):
+#     print("Bitwise AND yields 0, so this condition fails and is skipped.") # break - Bitwise AND
+# elif (x == 5 and y == 2):
+#     print("Both exact values match, successfully triggering this execution.") # execute - Logical AND operator
+# elif (x | y):
+#     print("Bitwise OR yields 7, but it won't run because the elif above caught it.") # break - Bitwise OR
+# elif (not (x > y)):
+#     print("x is greater than y, so NOT makes it False and it is skipped.") # break - Logical NOT
+# elif (x << 1):
+#     print("Left shift yields 10, but is skipped due to an earlier match.") # break - Bitwise Left Shift
+# else:
+#     print("No conditions were met.") # Default fallback
+
+
+
+
+# # switch case
+
+# name = input("What's your name? ")
+
+# match name:
+#     case "Harry":
+#         print("Gryffindor")
+#     case "Hermione":
+#         print("Gryffindor")
+#     case "Ron":
+#         print("Gryffindor")
+#     case "Draco":
+#         print("Slytherin")
+#     case _:
+#         print("Who?")
