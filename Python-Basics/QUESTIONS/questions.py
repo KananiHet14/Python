@@ -162,3 +162,26 @@
 #         print("slow brew")
 
 # question6()
+
+
+
+# question 7
+
+# def question7():
+#     while True:
+#         command = input("Enter the command (Scan or Exit) : ").strip().lower()
+#         if command == "scan":
+#             number = int(input("How many lockers do you want to scan ? : "))
+#             for i in range(1 , number+1):
+#                 if(i % 3 == 0):
+#                     continue
+#                 else:
+#                     print(f"Scanning locker {i}")
+#         elif command == "exit":
+#             print("Shutting Down...! ")
+#             break
+#         else:
+#             print("invalid command , try again....!")
+
+
+# question7()
