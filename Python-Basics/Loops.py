@@ -1,6 +1,6 @@
 """
 while loop = if you have fixed values or you want to run the loop until the condition is true then you can use while loop.
-while true si used for infinite loop and you can break the loop using break statement.
+while true is used for infinite loop and you can break the loop using break statement.
 range function = if you want to run the loop for a fixed number of times then you can use range function with for loop.
 for loop = if you want to run the loop in the specific range or do iteration then use for loop with range function.
 continue statemenr = if you want to skip the current iteration and move to the next iteration then you can use continue statement.
