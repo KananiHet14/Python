@@ -214,45 +214,45 @@
 
 
 
-# question 9
+# # question 9
 
-def question9():
-    # variables
-    cargo_weight = 0
-    max_capacity = 100
+# def question9():
+#     # variables
+#     cargo_weight = 0
+#     max_capacity = 100
 
-    # main menu loop
-    while True:
-        # command input
-        command = input("Enter the command (load , check , launch) : ").strip().lower()
+#     # main menu loop
+#     while True:
+#         # command input
+#         command = input("Enter the command (load , check , launch) : ").strip().lower()
 
-        # conditions
-        if(command == "load"):
-            crates_to_load = int(input("How many crates to load ? : "))
-            for i in range(1 , crates_to_load+1):
-                if(cargo_weight + 25 > max_capacity):
-                    print("capacity reached! cannot load more...")
-                    break
-                elif(i % 3 == 0):
-                    print(f"Crate {i} is fragile. Skipping...")
-                    continue
-                elif(cargo_weight != max_capacity and i % 3 != 0):
-                    cargo_weight += 25
-                    print(f"Loaded crate : {i}.\ntotal weight : {cargo_weight}")
-        elif(command == "check"):
-            print(f"current carrgo weight is : {cargo_weight}")
-            continue
-        elif(command == "launch"):
-            if(cargo_weight == 0):
-                print("Cannot launch an empty ship! Load cargo first.")
-                continue
-            else:
-                print(f"your ship is launching and your cargo weight is : {cargo_weight}...")
-                break
-        elif(command == "exit"):
-            break
-        else:
-            print("enter the valid command")
-            continue
+#         # conditions
+#         if(command == "load"):
+#             crates_to_load = int(input("How many crates to load ? : "))
+#             for i in range(1 , crates_to_load+1):
+#                 if(cargo_weight + 25 > max_capacity):
+#                     print("capacity reached! cannot load more...")
+#                     break
+#                 elif(i % 3 == 0):
+#                     print(f"Crate {i} is fragile. Skipping...")
+#                     continue
+#                 elif(cargo_weight != max_capacity and i % 3 != 0):
+#                     cargo_weight += 25
+#                     print(f"Loaded crate : {i}.\ntotal weight : {cargo_weight}")
+#         elif(command == "check"):
+#             print(f"current carrgo weight is : {cargo_weight}")
+#             continue
+#         elif(command == "launch"):
+#             if(cargo_weight == 0):
+#                 print("Cannot launch an empty ship! Load cargo first.")
+#                 continue
+#             else:
+#                 print(f"your ship is launching and your cargo weight is : {cargo_weight}...")
+#                 break
+#         elif(command == "exit"):
+#             break
+#         else:
+#             print("enter the valid command")
+#             continue
 
-question9()
+# question9()
