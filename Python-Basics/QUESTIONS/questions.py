@@ -185,3 +185,29 @@
 
 
 # question7()
+
+
+
+# question 8
+# def question8():
+#     # variables
+#     packaged = 0
+#     defects = 0
+#     item_number = int(input("How many items are on the belt ? : "))
+
+#     # loop
+#     for i in range(1 , item_number+1):
+#         if(i % 8 == 0):
+#             print(f"power failure at item {i} ! line stopped")
+#             break
+#         elif(i % 4 == 0):
+#             print(f"Item {i} is defective")
+#             defects += 1
+#             continue
+#         else:
+#             print(f"Item {i} is packaged")
+#             packaged += 1
+
+#     print(f"total number of packaged : {packaged} \ntotal number of defects : {defects}")
+
+# question8()
