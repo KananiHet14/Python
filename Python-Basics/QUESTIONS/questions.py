@@ -276,3 +276,21 @@
 #             print(f"{i} is enjoying a vacation")
 
 # question10()
+
+
+# question 11
+# def question11():
+#     racers = ["Mario", "Luigi", "Bowser", "Yoshi", "Toad"]
+
+#     for i in range(len(racers)):
+#         if(i == 0):
+#             print(f"1st Place : {racers[i]} wins the GOLD medal!")
+#         elif(i == 1):
+#             print(f"2nd Place : {racers[i]} wins the SILVER medal!")
+#         elif(i == 2):
+#             print(f"3rd Place : {racers[i]} wins the BRONZE medal!")
+#         else:
+#             print(f"{i+1}th place : {racers[i]} gets a participation trophy")
+
+
+# question11()
