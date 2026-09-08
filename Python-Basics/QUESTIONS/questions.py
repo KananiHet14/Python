@@ -256,3 +256,23 @@
 #             continue
 
 # question9()
+
+
+# question 10
+def question10():
+    spy_data = {
+    "Agent 007": "Active",
+    "Agent 009": "Captured",
+    "Agent 042": "Active",
+    "Agent 088": "Retired"
+}
+
+    for i in spy_data:
+        if(spy_data[i] == "Active"):
+            print(f"{i} is currently on a mission")
+        elif(spy_data[i] == "Captured"):
+            print(f"ALERT : {i} needs rescue...!")
+        else:
+            print(f"{i} is enjoying a vacation")
+
+question10()
