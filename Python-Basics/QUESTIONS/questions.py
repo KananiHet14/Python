@@ -294,3 +294,46 @@
 
 
 # question11()
+
+
+# # question 12
+# def question12():
+
+#     health = 100
+#     gold = 0
+#     # The player's journey
+#     path_taken = ["Hallway", "Armory", "Dungeon", "Vault", "Garden"]
+#     maze_rooms = {
+#         "Hallway": "Empty",
+#         "Armory": "Weapon",
+#         "Dungeon": "Monster",
+#         "Vault": "Gold",
+#         "Garden": "Monster"
+#         }
+
+#     for i in range(len(path_taken)):
+        
+
+#         current_room = path_taken[i]
+#         hidden_item = maze_rooms[current_room]
+        
+#         if(hidden_item == "Empty"):
+#             print(f"step {i+1} : room is empty")
+#         elif(hidden_item == "Weapon"):
+#             print(f"step {i+1} : found a sword ! you health add +50")
+#             health += 50
+#         elif(hidden_item == "Gold"):
+#             print(f"step {i+1} : jackpot ! you gained 1000 gold")
+#             gold += 1000
+#         else:
+#             print(f"step {i+1} : Attacked by monster ! health decreased by 80")
+#             health -= 80
+
+#         if(health <= 0):
+#             print(f"Game Over! You died in the {current_room}.")
+#             break
+
+#     if(health > 0):
+#         print(f"you survived with {health} HP and {gold} GOLD")
+
+# question12()    
