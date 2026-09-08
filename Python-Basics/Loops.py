@@ -45,12 +45,20 @@ tuple = tuple is like a list but little catch is there is it cant be changable.
 
 
 # iteration on LIST
-# students = ["het" , "navya"]
+# students = ["het" , "chirag"]
 # for student in students:
 #     print(student)
 
-# students = ["het" , "navya"]
+# students = ["het" , "chirag"]
 # for student in range(len(students)):
 #     print(student + 1  , " "  , students[student])
 
 # iteration on DICT
+# data = {
+#     "name"  : "kanani het" ,
+#     "rollnumber" : 30 , 
+#     "skill" : "Ai developer"
+# }
+
+# for i in data:
+#     print(i , data[i] , sep=" : ")
