@@ -394,11 +394,33 @@
 
 
 
-# question 15
-def question15():
-    for floor in range(1,4):
-        for room in range(1,5):
-            print(f"Cleaning room {floor}0{room} at {floor}")
-    print()
+# # question 15
+# def question15():
+#     for floor in range(1,4):
+#         for room in range(1,5):
+#             print(f"Cleaning room {floor}0{room} at {floor}")
+#     print()
 
-question15()    
+# question15()  
+
+
+# qeustion 16
+# def question16():
+#     total_bots_built = 0
+
+#     orders = [
+#         {"client": "Stark Industries", "qty": 3},
+#         {"client": "Wayne Enterprises", "qty": 5},
+#         {"client": "Oscorp", "qty": 2}
+#     ]
+
+#     for i in orders:
+#         print(f"\nProcessing order for client : {i['client']}")
+#         for j in range(i['qty']):
+#             print(f"Assembling bot {j+1} for {i['client']} client...")
+#             total_bots_built += 1
+#     print()
+
+#     print(f"\nFactory shutdown. Total robots built today: {total_bots_built}")
+
+# question16()
