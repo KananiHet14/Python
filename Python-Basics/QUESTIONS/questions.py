@@ -386,7 +386,7 @@
 
 #     for i in employees:
 #         if(i['role'] == "Intern"):
-#             print(f"* Assign a mentor to this employee. whose name is {i['name']} and work as  {i['role']} and makes ${i[''salary]} *")
+#             print(f"* Assign a mentor to this employee. whose name is {i['name']} and work as  {i['role']} and makes ${i['salary']} *")
 #         else:
 #             print(f"{i['name']} works as a {i['role']} and makes ${i['salary']}")
 
