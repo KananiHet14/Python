@@ -391,3 +391,14 @@
 #             print(f"{i['name']} works as a {i['role']} and makes ${i['salary']}")
 
 # question14()
+
+
+
+# question 15
+def question15():
+    for floor in range(1,4):
+        for room in range(1,5):
+            print(f"Cleaning room {floor}0{room} at {floor}")
+    print()
+
+question15()    
