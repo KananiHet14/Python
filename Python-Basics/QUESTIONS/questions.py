@@ -424,3 +424,29 @@
 #     print(f"\nFactory shutdown. Total robots built today: {total_bots_built}")
 
 # question16()
+
+
+# question 17
+def question17():
+    beans_stock = int(input("Enter the Beans stock : "))
+    total_revenue = 0
+
+    table_orders = [
+        {"table": 12, "drink": "Espresso", "qty": 3, "price": 4},
+        {"table": 5, "drink": "Americano", "qty": 5, "price": 3},
+        {"table": 8, "drink": "Mocha", "qty": 2, "price": 5}
+    ]
+
+    for i in table_orders:
+        print(f"\nProcessing Table : {i['table']}")
+        for j in range(i['qty']):
+            if(beans_stock > 0):
+                print(f"Brewing {i['drink']} cup {j+1}")
+                beans_stock -= 1
+                total_revenue += i['price']
+            else:
+                print(f"Out of beans! Cannot brew {i['drink']} cup {j+1}.")
+
+    print(f"\nShift over. Total revenue : ${total_revenue}. Beans remaining : {beans_stock}")
+
+question17()
