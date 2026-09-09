@@ -340,35 +340,35 @@
 
 
 # question 13
-# def question13():
-#     budget = int(input("Enter you budget : "))
-#     total_spent = 0
+def question13():
+    budget = int(input("Enter you budget : "))
+    total_spent = 0
 
-#     wish_list = ["Keyboard" , "Mouse" , "Monitor" , "Headphones" , "USB Drive"]
-#     prices = {
-#     "Keyboard": 30,
-#     "Mouse": 15,
-#     "Monitor": 150,
-#     "Headphones": 40,
-#     "USB Drive": 5
-#     }
+    wish_list = ["Keyboard" , "Mouse" , "Monitor" , "Headphones" , "USB Drive"]
+    prices = {
+    "Keyboard": 30,
+    "Mouse": 15,
+    "Monitor": 150,
+    "Headphones": 40,
+    "USB Drive": 5
+    }
 
-#     for i in range(len(wish_list)):
-#         current_item = wish_list[i]
-#         item_price = prices[current_item]
+    for i in range(len(wish_list)):
+        current_item = wish_list[i]
+        item_price = prices[current_item]
 
-#         if(item_price > budget):
-#             print(f"Item {i+1} : can't afford {current_item}. Skipping...")
-#             continue
-#         else:
-#             budget -= item_price
-#             total_spent += item_price
-#             print(f"Item {i+1} : bought {current_item} for {item_price}. Remaining budget is {budget} RS")
+        if(item_price > budget):
+            print(f"Item {i+1} : can't afford {current_item}. Skipping...")
+            continue
+        else:
+            budget -= item_price
+            total_spent += item_price
+            print(f"Item {i+1} : bought {current_item} for {item_price}. Remaining budget is {budget} RS")
 
-#         if(budget == 0):
-#             print("Wallet is empty! Stopping shopping.")
-#             break
+        if(budget == 0):
+            print("Wallet is empty! Stopping shopping.")
+            break
 
-#     print(f"Shopping complete...! You spent {total_spent} RS and have {budget} RS left over")
+    print(f"Shopping complete...! You spent {total_spent} RS and have {budget} RS left over")
 
-# question13()
+question13()
