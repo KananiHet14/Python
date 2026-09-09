@@ -11,7 +11,7 @@ list = it is a data type that contain different typed of data. it is resizable a
 dictionary = it is a key value pair that store data in the key and value. it is changable.
 set = store unique values but remove duplicates automatically.
 tuple = tuple is like a list but little catch is there is it cant be changable.
-
+none = it is the python special keyword that mean to be nothing.
 """
 
 # # while loop
@@ -62,3 +62,20 @@ tuple = tuple is like a list but little catch is there is it cant be changable.
 
 # for i in data:
 #     print(i , data[i] , sep=" : ")
+
+# list of the dict
+# students = [
+#     {"name" : "kanani het" , "rollnum" : 23} ,
+#     {"name" : "chirag mahajan" , "rollnum" : 24} , 
+#     {"name" : "yash donga" , "rollnum" : 25}
+# ]
+
+# for student in students:
+#     print(student["name"] , student["rollnum"] , sep= " | ")
+
+# nested loop
+# size = 4
+# for i in range(size):
+#     for j in range(i):
+#         print("*" , end = "")
+#     print()
