@@ -372,3 +372,22 @@
 #     print(f"Shopping complete...! You spent {total_spent} RS and have {budget} RS left over")
 
 # question13()
+
+
+
+# # question 14
+# def question14():
+#     employees = [
+#         {"name": "Alice", "role": "Manager", "salary": 80000},
+#         {"name": "Bob", "role": "Developer", "salary": 60000},
+#         {"name": "Charlie", "role": "Intern", "salary": 20000},
+#         {"name": "Diana", "role": "Developer", "salary": 65000}
+#     ]
+
+#     for i in employees:
+#         if(i['role'] == "Intern"):
+#             print(f"* Assign a mentor to this employee. whose name is {i['name']} and work as  {i['role']} and makes ${i[''salary]} *")
+#         else:
+#             print(f"{i['name']} works as a {i['role']} and makes ${i['salary']}")
+
+# question14()
