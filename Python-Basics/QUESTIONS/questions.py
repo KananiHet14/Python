@@ -560,3 +560,30 @@
 #             break
 
 # question23()
+
+
+# question 24 : the shift formatter
+
+# def question24():
+#     staff = [{"name": "Krutika", "role": "Manager", "shift": "Day"},
+#              {"name": "Rahul", "role": "Barista", "shift": "Night"}]
+
+#     for i in staff:
+#         if(i['shift'] == "Day"):
+#             print(f"{i['name']} - {i['role']}")
+#         else:
+#             print(f"Alert : \n \t {i['name']} is on night shift")
+
+# question24()
+
+
+# question 25 : The revenu drop detector
+
+# def question25():
+#     revenue = [300 , 310 , 290 , 150 , 400]
+
+#     for i in range(1 , len(revenue)):
+#         if(revenue[i] < revenue[i-1]):
+#             print(f"drop detected on day {i+1} ! Lost $ {revenue[i-1] - revenue[i]}")
+
+# question25()
