@@ -517,3 +517,46 @@
 #             print(f"{i} gets a STANDARD VIP pass")
 
 # question21()
+
+
+# question 22 : The Bulk Discount Engine
+    
+# def question22(guest_bills):
+
+#     for table_name , details in guest_bills.items():
+#         if(details['total'] > 50) and (details['member'] == True):
+#             details['total'] *= 0.85
+
+#     return guest_bills
+
+# tonights_bills = {
+#     "Table 1": {"total": 120, "member": True},
+#     "Table 2": {"total": 45, "member": True},
+#     "Table 3": {"total": 80, "member": False}
+# }
+
+# updated_bills = question22(tonights_bills)
+# print(tonights_bills)
+
+
+
+#uqestion 23 :  The Security Lockout
+
+# def question23():
+
+#     error_count = 0
+#     daily_total = 0
+#     while True:
+#         item_price = int(input("Enter the item price : "))
+
+#         if(item_price < 0):
+#             error_count += 1
+#         else:
+#             error_count = 0
+#             daily_total += item_price
+
+#         if(error_count == 3):
+#             print("System Locked....!")
+#             break
+
+# question23()
