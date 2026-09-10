@@ -450,3 +450,70 @@
 #     print(f"\nShift over. Total revenue : ${total_revenue}. Beans remaining : {beans_stock}")
 
 # question17()
+
+"""problem solving day 10 question in just one day"""
+
+# # question 18 = The Batch Name Cleaner
+# def question18():
+#     messy_names = ["   kRuTiKa   ", "  ", "rAhul  ", ""]
+#     for i in messy_names:
+#         messy_names = i.strip().lower()
+#         if(messy_names == ""):
+#             print("Error! blank name detected")
+#         else:
+#             print(f"Welcome {messy_names} !")
+
+# question18()
+
+
+# qeustion 19 = The Inventory Counter from string to list. and skip sugar as a count
+# def question19():
+#     delivery_string = "Milk Sugar Coffee Syrups Cups Lids"
+#     delivery_string = delivery_string.split()
+
+#     # a = len(delivery_string)
+#     valid_items = 0
+#     for i in delivery_string:
+#         if(i == "Sugar"):
+#             continue
+#         else:
+#             valid_items += 1
+
+#     print(f"you have total {valid_items} valid items")
+
+
+# question19()
+
+
+# question 20 : The Rolling tax and discount.
+# def question20():
+#     total = float(input("Enter the total of your bill : "))
+#     while True:
+#         if(total == 0):
+#             break
+#         else:
+#             total += total*0.18
+
+#             if(total > 100):
+#                 total -= 5
+#                 total = round(total , 2)
+#             break
+
+#     print(f"your total bill amount is : {total}Rs")
+# question20()
+
+
+
+# question 21 : the VIP filter by using set and convert it to list
+# def question21():
+#     friday = {"Alice", "Bob", "Charlie"}
+#     saturday = {"Charlie", "Bob", "Eve"}
+#     loyal_guests = list(friday & saturday)
+
+#     for i in loyal_guests:
+#         if(i == "Charlie"):
+#             print("Charlie gets the Ultimate VIP Pass.")
+#         else:
+#             print(f"{i} gets a STANDARD VIP pass")
+
+# question21()
