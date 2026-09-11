@@ -646,3 +646,30 @@
 #     print(f"final audited stock : {starting_stock}")
 
 # question28()
+
+
+# question 29 : The Hotel Room Service Router
+
+# def question29():
+#     room_requests = [
+#     {"room": 101, "items": ["Towels", "Soap"]},
+#     {"room": 205, "items": ["Pillows", "Towels", "Shampoo"]}
+#     ]
+
+#     cart_inventory = {
+#         "Towels": 2,
+#         "Soap": 5,
+#         "Pillows": 0,
+#         "Shampoo": 3
+#     }
+
+#     for outerlp in room_requests:
+#         print(f"\n- Processing Room {outerlp['room']} -")
+#         for specific_item in outerlp['items']:
+#             if(cart_inventory[specific_item] > 0):
+#                 cart_inventory[specific_item] -= 1
+#                 print(f"Delivering {specific_item}")
+#             else:
+#                 print(f"Out of stock on {specific_item} ! halting delivery for room {outerlp['room']}")
+#                 break
+# question29()
