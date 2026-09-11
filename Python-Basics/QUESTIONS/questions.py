@@ -587,3 +587,44 @@
 #             print(f"drop detected on day {i+1} ! Lost $ {revenue[i-1] - revenue[i]}")
 
 # question25()
+
+
+# question 26 : Unique digital menu
+
+# def question26():
+#     raw_menu = "latte, tea, espresso, tea, cake, latte"
+#     split_menu = raw_menu.split(",")
+#     clean_menu = []
+#     for i in split_menu:
+#         cleaned_item = i.strip()
+#         if cleaned_item not in clean_menu:
+#             clean_menu.append(cleaned_item)
+        
+#     for i in clean_menu:
+#         print(i.upper())
+
+# question26()     
+
+# question 27 : The Live Kitchen Ticket System
+
+# def question27():
+#     orders = [
+#                 {"table": 1, "items": ["Burger", "Fries"]},
+#                 {"table": 2, "items": ["Salad"]}
+#             ]
+#     stock = {
+#             "Burger": 1,
+#             "Fries": 5,
+#             "Salad": 0
+#             }
+
+#     for order in orders:
+#         print(f"Table {order['table']}:")
+#         for item in order['items']:
+#             if(stock[item] > 0):
+#                 stock[item] -= 1
+#                 print(f"coocking {item}")
+#             else:
+#                 print(f"86 {item} ! Order cancelled for Table : {order['table']}.")
+#                 break
+# question27()
