@@ -628,3 +628,21 @@
 #                 print(f"86 {item} ! Order cancelled for Table : {order['table']}.")
 #                 break
 # question27()
+
+
+# question 28 : the stock audit
+
+# def question28():
+#     starting_stock = 15
+#     adjustments = [10, -5, -8, -15, 20, -5]
+#     for i in adjustments:
+#         starting_stock += i
+#         if(starting_stock >= 0):
+#             print(f"Stock updated. Current level: {starting_stock}")
+#         else:
+#             print(f"CRITICAL ERROR: Stock cannot be negative. Halting audit!")
+#             break
+
+#     print(f"final audited stock : {starting_stock}")
+
+# question28()
