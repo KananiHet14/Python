@@ -673,3 +673,33 @@
 #                 print(f"Out of stock on {specific_item} ! halting delivery for room {outerlp['room']}")
 #                 break
 # question29()
+
+
+# question 30 = the safe divider
+# def devide(a,b):
+#     try:
+#         print(a/b)
+#     except ZeroDivisionError:
+#         print("cant devide with zero")
+
+# devide(20 , 0)
+
+
+# question 31 = The silent crash
+# def question31():
+#     try:
+#         bad_data = int("glitch")
+#     except ValueError:
+#         pass
+
+# question31()
+
+
+# question 32 = the forgotten variable
+# def question32():
+#     try:
+#         print(mystry_user)
+#     except NameError:
+#         print("Error : that variable name is not defined")
+
+# question32()
