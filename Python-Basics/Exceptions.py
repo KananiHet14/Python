@@ -13,6 +13,8 @@ finally: Runs regardless of what happens useful for cleanup tasks like closing f
 get_int = checks if it is a valid integer, and automatically loops to re-ask the user if they type something invalid. cs50 library
 get_float = same as int (just catch is its for decimal values) cs50 library
 get_string = (its for strings) cs50 library
+pass = ignoring expected errors and defining custom exception classes.
+function arguments = the specific values you pass into a function when you call it.
 """
 
 import cs50
@@ -71,3 +73,49 @@ import cs50
 
 # finally:
 #     print("Finally: This code always runs.")
+
+
+
+
+# get_int()
+# def main():
+#     x = get_int()
+#     print(f"x is {x}")
+
+# def get_int():
+#     while True:
+#         try:
+#             x = int(input("What is X ?"))
+#         except ValueError:
+#             print("x is not an integer")
+
+# main()
+
+# get_float()
+# def main():
+#     x = get_float()
+#     print(f"x is {x}")
+
+# def get_float():
+#     while True:
+#         try:
+#             x = float(input("What is X ? "))
+#             return x
+#         except ValueError:
+#             print("x is not a float (decimal number)")
+
+# main()
+
+# get_string()
+# def main():
+#     x = get_string()
+#     print(f"x is {x}")
+
+# def get_string():
+#     while True:
+#         x = input("What is X ? ").strip()
+#         if x:  # Checks if the string is not empty
+#             return x
+#         print("Please enter a valid string.")
+
+# main()
