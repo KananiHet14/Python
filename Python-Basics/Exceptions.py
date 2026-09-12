@@ -119,3 +119,18 @@ import cs50
 #         print("Please enter a valid string.")
 
 # main()
+
+
+# pass keyword
+# def main():
+#     x = get_int()
+#     print(f"x is {x}")
+
+# def get_int():
+#     while True:
+#         try:
+#             return int(input("waht is x? : "))
+#         except ValueError:
+#             pass
+
+# main()
