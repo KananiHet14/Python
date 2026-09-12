@@ -1,0 +1,326 @@
+"""
+# bug = a mistake that you make while writing a program
+# single = is a assignment operator its used to hand a value to a variable
+# Pseudocode is a step-by-step description of an algorithm written in simple English using a code-like structure.
+# print(*object) = means print take any object and print it on the screen
+# print(sep=' ') = sep means saperator , sep used to saperate the objecct with space or any other character.
+# print(end='\n') = \n means new line ,  end used to print the next object in new line.
+# \\ = the words between the backslash used to escaping
+# print(f"hello {name} !") = f string is a string that contain varibale value + string also. there f means formate.
+# string.strip() = its a method that is used to remove the white-spaces from the string.
+# string.capitalize() = its a method that is used to capitalize the first letter of the string.
+# string.title() = its a methoda that is used to capitlized first letter of each word in the string.
+# string.upper() = its a method that is used to convert the string to uppercase.
+# string.lower() = its a method that is used to convert the string to lowercase.
+# string.split() = its a method that is used to split the string into a list of substrings.
+# int(input()) = its a function that used for type casting the input value because input value is defaltly in a string type. you can also do it by float , etc...
+# Arithmatic Operators = + , - , * , / , % , // , ** used to perfeom calculation work
+# relational Operators = == , != , > , < , >= , <= used to compare the values
+# logical Operators = and , or , not used to combine the conditions
+# Assignment Operators = = , += , -= , *= , /= , %= , //= , **= used to assign the value to a variable and change it if.
+# Ternary Operators = a if condition else b used to assign the value to a variable based on a condition.
+# Identity Operators = is , is not used to compare the memory location of two objects.
+# bitwise Operators = & , | , ^ , ~ , << , >> used to perform bitwise operations on integers.
+# round(number[,ndigits]) = its a python inbuilt function that is used to round the number to nearest integer and also you can specified it for precision by using ndigits parameter.   
+# def is the kywords that used to define functions in python
+# return is also keyword that used to return the value from the function to the caller.
+"""
+
+# name = input("enter you name : ")
+
+# Printing the name using different methods
+# print("hello " + name + " !")
+# print("hello, ", end="\n")
+# print(name)
+# print("hello, " , name , sep="\n")
+
+
+# String Methoda
+# print(name.strip())
+# print(name.capitalize())
+# print(name.title())
+# print(name.upper())
+# print(name.lower())
+# print(name.split("-"))
+
+
+# Setup
+# x = int(input("Enter number 1: "))
+# y = int(input("Enter number 2: "))
+
+# # Arithmetic Operators (+, -, *, /, %)
+# print("\n--- Arithmetic Operators ---")
+# print(f"{x} + {y} = {x + y}")
+# print(f"{x} - {y} = {x - y}")
+# print(f"{x} * {y} = {x * y}")
+# print(f"{x} / {y} = {x / y}")
+# print(f"{x} % {y} = {x % y}")
+
+# # Relational Operators (<, <=, >, >=, ==, !=)
+# print("\n--- Relational Operators ---")
+# print(f"{x} < {y} : {x < y}")
+# print(f"{x} <= {y} : {x <= y}")
+# print(f"{x} > {y} : {x > y}")
+# print(f"{x} >= {y} : {x >= y}")
+# print(f"{x} == {y} : {x == y}")
+# print(f"{x} != {y} : {x != y}")
+
+# # Logical Operators (and, or, not)
+# print("\n--- Logical Operators ---")
+# print(f"({x} > 0) and ({y} > 0) : {(x > 0) and (y > 0)}")
+# print(f"({x} > 0) or ({y} > 0) : {(x > 0) or (y > 0)}")
+# print(f"not ({x} > 0) : {not (x > 0)}")
+
+# # Bitwise Operators (&, |, ^, ~, <<, >>)
+# print("\n--- Bitwise Operators ---")
+# print(f"{x} & {y} = {x & y}")
+# print(f"{x} | {y} = {x | y}")
+# print(f"{x} ^ {y} = {x ^ y}")
+# print(f"~{x} = {~x}")
+# print(f"{x} << 1 = {x << 1}")
+# print(f"{x} >> 1 = {x >> 1}")
+
+# Assignment Operators (=, +=, -=, *=, %=)
+# print("\n--- Assignment Operators ---")
+# a = x  # =
+# print(f"a = {a}")
+# a += y # +=
+# print(f"a += {y} -> {a}")
+# a -= y # -=
+# print(f"a -= {y} -> {a}")
+# a *= y # *=
+# print(f"a *= {y} -> {a}")
+# a %= y # %= (Note: y cannot be 0 here)
+# print(f"a %= {y} -> {a}")
+
+# Ternary Operator (x if condition else y)
+# print("\n--- Ternary Operator ---")
+# ternary_result = x if x > y else y
+# print(f"The larger number is: {ternary_result}")
+
+# Identity Operators (is, is not)
+# print("\n--- Identity Operators ---")
+# Using lists to properly demonstrate identity in memory
+# list1 = [x, y]
+# list2 = [x, y]
+# list3 = list1
+
+# print(f"list1 is list3 : {list1 is list3}")
+# print(f"list1 is not list2 : {list1 is not list2}")
+
+# Round function
+# number = 9.5675
+
+# print(round(number))
+
+
+# Function and Methods
+# def hello(to = "world"):
+#     print(f"hello ,  {to} !")
+
+# hello()
+
+
+# def main():
+#     name = input("Enter your name: ")
+#     hello(name)
+
+# def hello(to="world"):
+#     print("hello , " , to)
+
+# main()
+
+
+"""
+if = its used to check condition if its true then its execute other wise its break the flow of the program.
+flowChart = its a pictorial and representable diagram of the program
+elif = its used for mulitple conditions check in step by step if any one is related to true then its execute otherwise break the flow.
+else = its used when all conditions are false then else execute the flow of the program.
+OR = f = x+y [below is table of or operator] [only addition] [OR, |]
+x   y   f
+0   0   False
+1   0   True
+0   1   True
+1   1   True
+
+AND = f = x*y [below is table of and operator] [only multiplication] [AND, &]
+x   y   f
+0   0   False
+1   0   False
+0   1   False
+1   1   True
+
+NOT = f = x' [below is table of not operator] [opposite of the inputted value] [NOT, ~]
+x       f
+0       True
+1       False 
+"""
+
+# if
+
+# a  = int(input("enter the numbher : "))
+# if (a < 5):
+#     print("its just example of if condition") # break
+# if (a > 5):
+#     print("its just example of if condition") # execute
+
+
+
+# # elif
+
+
+# if(a < 5):
+#     print("greater")
+# elif(a > 5):
+#     print("lesser")
+# elif(a == 5):
+#     print("equal")
+# else:
+#     print("negative number")
+
+
+# x = 5 # Binary: 0101
+# y = 2 # Binary: 0010
+
+# # Logical Operators
+
+# if (x > 0 and y > 0):
+#     print("Both x and y are positive, making the combined statement True.") # execute - Logical AND
+# if (x > 0 or y < 0):
+#     print("x is positive, so it evaluates to True regardless of y's value.") # execute - Logical OR
+# if (not (x == y)):
+#     print("x is not equal to y, so the inverted result becomes True.") # execute - Logical NOT
+
+# # Bitwise Operators
+
+# if (x & y):
+#     print("5 & 2 results in 0 (binary 0000), which evaluates as False.") # break - Bitwise AND
+# if (x | y):
+#     print("5 | 2 results in 7 (binary 0111), which evaluates as True.") # execute - Bitwise OR
+# if (x ^ y):
+#     print("5 ^ 2 results in 7 because the bits differ, evaluating as True.") # execute - Bitwise XOR
+# if (~x):
+#     print("~5 results in -6, and since it is not zero, it evaluates as True.") # execute - Bitwise NOT
+# if (x << y):
+#     print("Shifting 5 left by 2 positions yields 20, evaluating as True.") # execute - Bitwise Left Shift
+# if (x >> y):
+#     print("Shifting 5 right by 2 positions yields 1, evaluating as True.") # execute - Bitwise Right Shift
+
+
+# # elif
+
+
+# if (x & y):
+#     print("Bitwise AND yields 0, so this condition fails and is skipped.") # break - Bitwise AND
+# elif (x == 5 and y == 2):
+#     print("Both exact values match, successfully triggering this execution.") # execute - Logical AND operator
+# elif (x | y):
+#     print("Bitwise OR yields 7, but it won't run because the elif above caught it.") # break - Bitwise OR
+# elif (not (x > y)):
+#     print("x is greater than y, so NOT makes it False and it is skipped.") # break - Logical NOT
+# elif (x << 1):
+#     print("Left shift yields 10, but is skipped due to an earlier match.") # break - Bitwise Left Shift
+# else:
+#     print("No conditions were met.") # Default fallback
+
+
+
+
+# # switch case
+
+# name = input("What's your name? ")
+
+# match name:
+#     case "Harry":
+#         print("Gryffindor")
+#     case "Hermione":
+#         print("Gryffindor")
+#     case "Ron":
+#         print("Gryffindor")
+#     case "Draco":
+#         print("Slytherin")
+#     case _:
+#         print("Who?")
+
+
+"""
+while loop = if you have fixed values or you want to run the loop until the condition is true then you can use while loop.
+while true is used for infinite loop and you can break the loop using break statement.
+range function = if you want to run the loop for a fixed number of times then you can use range function with for loop.
+for loop = if you want to run the loop in the specific range or do iteration then use for loop with range function.
+continue statemenr = if you want to skip the current iteration and move to the next iteration then you can use continue statement.
+break statement = if you want to break the loop and exit from the loop then you can use break statement. 
+iteration = it means repeating the process or executing a block of code typically to step throug element of a collectionone by one.
+len = len is a python inbuilt function that is used for check the length of the data.
+list = it is a data type that contain different typed of data. it is resizable and chanagable.
+dictionary = it is a key value pair that store data in the key and value. it is changable.
+set = store unique values but remove duplicates automatically.
+tuple = tuple is like a list but little catch is there is it cant be changable.
+none = it is the python special keyword that mean to be nothing.
+"""
+
+# # while loop
+# i = 0
+# while i != 3:
+#     print("het")
+#     i += 1
+
+
+# # forloop range function
+# for i in range(1 , 4):
+#     print(i)
+#     i += 1
+
+# for loop
+# for _ in range(3):
+#     print("meow!")
+
+# print("meow ! \n" * 3)
+
+
+# validating input
+# while True:
+#     n = int(input("Enter a number : "))
+#     if n > 0:
+#         print("positive number")
+#         break
+#     else:
+#         print("please enter a positive number !")
+#         continue
+
+
+# iteration on LIST
+# students = ["het" , "chirag"]
+# for student in students:
+#     print(student)
+
+# students = ["het" , "chirag"]
+# for student in range(len(students)):
+#     print(student + 1  , " "  , students[student])
+
+# iteration on DICT
+# data = {
+#     "name"  : "kanani het" ,
+#     "rollnumber" : 30 , 
+#     "skill" : "Ai developer"
+# }
+
+# for i in data:
+#     print(i , data[i] , sep=" : ")
+
+# list of the dict
+# students = [
+#     {"name" : "kanani het" , "rollnum" : 23} ,
+#     {"name" : "chirag mahajan" , "rollnum" : 24} , 
+#     {"name" : "yash donga" , "rollnum" : 25}
+# ]
+
+# for student in students:
+#     print(student["name"] , student["rollnum"] , sep= " | ")
+
+# nested loop
+# size = 4
+# for i in range(size):
+#     for j in range(i):
+#         print("*" , end = "")
+#     print()
