@@ -134,3 +134,18 @@ import cs50
 #             pass
 
 # main()
+
+
+# Functions arguments
+# def main():
+#     x = get_int("What is X ?")
+#     print(f"x is {x}")
+
+# def get_int(prompt):
+#     while True:
+#         try:
+#             return int(input(prompt))
+#         except ValueError:
+#             pass
+
+# main()
