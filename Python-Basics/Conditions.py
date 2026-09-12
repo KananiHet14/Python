@@ -20,28 +20,7 @@ x   y   f
 NOT = f = x' [below is table of not operator] [opposite of the inputted value] [NOT, ~]
 x       f
 0       True
-1       False
-
-NOR = f = (x+y)' [below is table of nor operator] [only addition then opposite of the result] [NOT (x OR y), ~(x | y)]
-x   y   f
-0   0   True
-1   0   False
-0   1   False
-1   1   False
-
-NAND = f = (x*y)' [below is table of nand operator] [only multiplication then opposite of the result] [NOT (x AND y), ~(x & y)]
-x   y   f
-0   0   True
-1   0   False
-0   1   False
-1   1   False
-
-XOR = f = x⊕y [below is table of xor operator] [true only when inputs are strictly different] [^]
-x   y   f
-0   0   False
-1   0   True
-0   1   True
-1   1   False   
+1       False 
 """
 
 # if
