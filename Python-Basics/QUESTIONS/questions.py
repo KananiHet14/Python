@@ -703,3 +703,63 @@
 #         print("Error : that variable name is not defined")
 
 # question32()
+
+
+# question 33
+# def question33():
+#     while True:
+#         try:
+#             user_num = int(input("enter a whole number : "))
+#         except ValueError:
+#             print("wrong input please try again")
+#         else:
+#             print("Thanks you !")
+#             break
+
+# question33()
+
+# question 34
+# def question34():
+#     menu = ["Coffee", "Tea", "Water"]
+#     index = int(input("Enter a index number : "))
+#     try:
+#         print(menu[index])
+#     except IndexError:
+#         print("That item number is not on menu")
+#     finally:
+#         print("Closing menu interface")
+
+# question34()
+
+
+# question 35
+# def question35():
+#     sensor_data = [70, 75, "Glitch", 80, "Error"]
+#     for item in sensor_data:
+#         try:
+#             print(item + 10)
+#         except TypeError:
+#             print("Skipping corrupted data.")
+
+# question35()
+
+
+# questiop 36
+# def question36():
+#     data = {
+#                 "Alice": "50000.50" ,
+#                 "Bob": "Not Provided" ,
+#                 "Charlie": "60000.00"
+#                 }
+
+#     for i in data.values():
+#         try:
+#             update = float(i)
+#         except ValueError:
+#             pass
+#         else:
+#             update += 1000
+#             print(update)
+
+
+# question36()
