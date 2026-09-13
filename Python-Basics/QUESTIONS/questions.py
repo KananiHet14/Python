@@ -763,3 +763,58 @@
 
 
 # question36()
+
+
+# question 37
+# def question37():
+#     box_weights = [100, 50, 0, 200]
+#     index_input = int(input("Enter a number for index access : "))
+#     try:
+#         a = 1000/box_weights[index_input]
+#         print(a)
+#     except IndexError:
+#         print("invalid box selection")
+#     except ZeroDivisionError:
+#         print("cant devide a container by 0 weight")
+
+# question37()
+
+# question 38
+
+# def question38(user_list , user_id):
+#     try:
+#         user_id = user_id + 0
+#         print(user_list[user_id])
+#     except TypeError:
+#         print("ID must be a number")
+#     except IndexError:
+#         print("profile is missing")
+#     finally:
+#         print("System check complete")
+# question38(["Alice", "Bob", "Charlie", "Diana"] , "TWo")
+
+
+
+# question 39
+# def question39():
+#     batches = [
+#         [100, 5],        # 100 total items, 5 defects
+#         [0, 10],         # 0 total items, 10 defects
+#         [50, "Five"],    # 50 total items, "Five" defects
+#         [40]             # Missing the defect data entirely
+#         ]
+
+#     for batchesiterate in batches:
+#         try:
+#             rate = batchesiterate[1] / batchesiterate[0]
+#         except IndexError:
+#             print("Audit Failed: Batch missing defect data.")
+#         except TypeError:
+#             print("Audit Failed: Batch contains text instead of numbers.")
+#         except ZeroDivisionError:
+#             print("Audit Failed: Total items cannot be zero.")
+#         else:
+#             print(f"Batch audited successfully. Defect rate : {rate}")
+#         finally:
+#             print("--- Moving to next batch ---")
+# question39()
