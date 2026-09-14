@@ -24,6 +24,58 @@
 # round(number[,ndigits]) = its a python inbuilt function that is used to round the number to nearest integer and also you can specified it for precision by using ndigits parameter.   
 # def is the kywords that used to define functions in python
 # return is also keyword that used to return the value from the function to the caller.
+# if = its used to check condition if its true then its execute other wise its break the flow of the program.
+# flowChart = its a pictorial and representable diagram of the program
+# elif = its used for mulitple conditions check in step by step if any one is related to true then its execute otherwise break the flow.
+# else = its used when all conditions are false then else execute the flow of the program.
+# OR = f = x+y [below is table of or operator] [only addition] [OR, |]
+x   y   f
+0   0   False
+1   0   True
+0   1   True
+1   1   True
+
+# AND = f = x*y [below is table of and operator] [only multiplication] [AND, &]
+x   y   f
+0   0   False
+1   0   False
+0   1   False
+1   1   True
+
+# NOT = f = x' [below is table of not operator] [opposite of the inputted value] [NOT, ~]
+x       f
+0       True
+1       False 
+# while loop = if you have fixed values or you want to run the loop until the condition is true then you can use while loop.
+# while true is used for infinite loop and you can break the loop using break statement.
+# range function = if you want to run the loop for a fixed number of times then you can use range function with for loop.
+# for loop = if you want to run the loop in the specific range or do iteration then use for loop with range function.
+# continue statemenr = if you want to skip the current iteration and move to the next iteration then you can use continue statement.
+# break statement = if you want to break the loop and exit from the loop then you can use break statement. 
+# iteration = it means repeating the process or executing a block of code typically to step throug element of a collectionone by one.
+# len = len is a python inbuilt function that is used for check the length of the data.
+# list = it is a data type that contain different typed of data. it is resizable and chanagable.
+# dictionary = it is a key value pair that store data in the key and value. it is changable.
+# set = store unique values but remove duplicates automatically.
+# tuple = tuple is like a list but little catch is there is it cant be changable.
+# none = it is the python special keyword that mean to be nothing.
+# exception = its an error that occurs during the execution of a program and disrupts the noraml flow of its instructions.
+# ZeroDivisionError: Raised when you try to divide a number by zero (1 / 0).
+# ValueError: Raised when a function gets an argument of the right type but an inappropriate value.
+# TypeError: Raised when an operation is applied to an object of an inappropriate data type.
+# FileNotFoundError: Raised when you attempt to open a file that does not exist.
+# IndexError: Raised when you try to access an index that is out of range for a list.
+# NameEroor: Python simply does not recognize the "name" you are trying to use
+# try: Runs the risky code that might cause an error. its a keywords
+# except: Catches and handles the error if one occurs. its a keywords
+# else: Executes only if no exception occurs in try. its a keywords
+# finally: Runs regardless of what happens useful for cleanup tasks like closing files. its a keywords
+# get_int = checks if it is a valid integer, and automatically loops to re-ask the user if they type something invalid. cs50 library
+# get_float = same as int (just catch is its for decimal values) cs50 library
+# get_string = (its for strings) cs50 library
+# pass = ignoring expected errors and defining custom exception classes.
+# function arguments = the specific values you pass into a function when you call it.
+
 """
 
 # name = input("enter you name : ")
@@ -132,28 +184,7 @@
 
 
 """
-if = its used to check condition if its true then its execute other wise its break the flow of the program.
-flowChart = its a pictorial and representable diagram of the program
-elif = its used for mulitple conditions check in step by step if any one is related to true then its execute otherwise break the flow.
-else = its used when all conditions are false then else execute the flow of the program.
-OR = f = x+y [below is table of or operator] [only addition] [OR, |]
-x   y   f
-0   0   False
-1   0   True
-0   1   True
-1   1   True
 
-AND = f = x*y [below is table of and operator] [only multiplication] [AND, &]
-x   y   f
-0   0   False
-1   0   False
-0   1   False
-1   1   True
-
-NOT = f = x' [below is table of not operator] [opposite of the inputted value] [NOT, ~]
-x       f
-0       True
-1       False 
 """
 
 # if
@@ -243,22 +274,6 @@ x       f
 #         print("Who?")
 
 
-"""
-while loop = if you have fixed values or you want to run the loop until the condition is true then you can use while loop.
-while true is used for infinite loop and you can break the loop using break statement.
-range function = if you want to run the loop for a fixed number of times then you can use range function with for loop.
-for loop = if you want to run the loop in the specific range or do iteration then use for loop with range function.
-continue statemenr = if you want to skip the current iteration and move to the next iteration then you can use continue statement.
-break statement = if you want to break the loop and exit from the loop then you can use break statement. 
-iteration = it means repeating the process or executing a block of code typically to step throug element of a collectionone by one.
-len = len is a python inbuilt function that is used for check the length of the data.
-list = it is a data type that contain different typed of data. it is resizable and chanagable.
-dictionary = it is a key value pair that store data in the key and value. it is changable.
-set = store unique values but remove duplicates automatically.
-tuple = tuple is like a list but little catch is there is it cant be changable.
-none = it is the python special keyword that mean to be nothing.
-"""
-
 # # while loop
 # i = 0
 # while i != 3:
@@ -324,3 +339,136 @@ none = it is the python special keyword that mean to be nothing.
 #     for j in range(i):
 #         print("*" , end = "")
 #     print()
+
+import cs50
+
+# Basic example of try:except
+# n = 10
+# try:
+#     res = n/0
+# except ZeroDivisionError:
+#     print("can't devided by zero")
+
+
+# finally keyword
+# try:
+#     result = 10 / 0
+# except ZeroDivisionError:
+#     print("Caught division by zero error.")
+# finally:
+#     print("This block always executes.")
+
+# # proper code
+# try:
+#     # 1. ZeroDivisionError
+#     # result_div = 5 / 0
+
+#     # 2. ValueError
+#     # user_age = int("twenty")
+
+#     # 3. TypeError
+#     # total_cost = "Price: " + 19.99
+
+#     # 4. IndexError
+#     # colors = ["red", "blue"]
+#     # selected_color = colors[5]
+
+#     # 5. NameError
+#     print(missing_variable)
+
+# except ZeroDivisionError:
+#     print("ZeroDivisionError caught.")
+
+# except ValueError:
+#     print("ValueError caught.")
+
+# except TypeError:
+#     print("TypeError caught.")
+
+# except IndexError:
+#     print("IndexError caught.")
+
+# except NameError:
+#     print("NameError caught.")
+
+# else:
+#     print("Success: No errors occurred.")
+
+# finally:
+#     print("Finally: This code always runs.")
+
+
+
+
+# get_int()
+# def main():
+#     x = get_int()
+#     print(f"x is {x}")
+
+# def get_int():
+#     while True:
+#         try:
+#             x = int(input("What is X ?"))
+#         except ValueError:
+#             print("x is not an integer")
+
+# main()
+
+# get_float()
+# def main():
+#     x = get_float()
+#     print(f"x is {x}")
+
+# def get_float():
+#     while True:
+#         try:
+#             x = float(input("What is X ? "))
+#             return x
+#         except ValueError:
+#             print("x is not a float (decimal number)")
+
+# main()
+
+# get_string()
+# def main():
+#     x = get_string()
+#     print(f"x is {x}")
+
+# def get_string():
+#     while True:
+#         x = input("What is X ? ").strip()
+#         if x:  # Checks if the string is not empty
+#             return x
+#         print("Please enter a valid string.")
+
+# main()
+
+
+# pass keyword
+# def main():
+#     x = get_int()
+#     print(f"x is {x}")
+
+# def get_int():
+#     while True:
+#         try:
+#             return int(input("waht is x? : "))
+#         except ValueError:
+#             pass
+
+# main()
+
+
+# Functions arguments
+# def main():
+#     x = get_int("What is X ?")
+#     print(f"x is {x}")
+
+# def get_int(prompt):
+#     while True:
+#         try:
+#             return int(input(prompt))
+#         except ValueError:
+#             pass
+
+# main()
