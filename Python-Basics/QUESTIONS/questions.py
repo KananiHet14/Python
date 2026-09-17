@@ -818,3 +818,56 @@
 #         finally:
 #             print("--- Moving to next batch ---")
 # question39()
+
+
+
+import sys
+import statistics
+
+# question 40 project : The Command-Line Data Auditor
+
+# def question40():
+#     arguments = sys.argv[1:]
+#     valid_scores = []
+
+#     for i in arguments:
+#         try:
+#            scr = float(i)
+#            valid_scores.append(scr)
+#         except ValueError:
+#             pass
+
+#     try:
+#         average = statistics.mean(valid_scores)
+#         print(average)
+#     except statistics.StatisticsError:
+#         print("ERROR : No valid number is provided")
+
+# question40()
+
+
+# question 41 project : The Secure Authentication Router
+# def question41():
+#     database = {
+#         "admin": 1, 
+#         "editor": 2, 
+#         "viewer": 3
+#         }
+#     while True:
+#         role = input("Enter a role : ").strip().lower()
+
+#         match role:
+#             case "admin" | "editor" | "viewer":
+#                 level = database[role]
+#                 print(f"access granted. your level is {level}")
+#                 try:
+#                     print(secure_key)
+#                 except NameError:
+#                     print("SECURITY ALERT : missing variable detected")
+#             case "exit":
+#                 print("Shutting down the system")
+#                 break
+#             case _:
+#                 print("Unknown role")
+
+# question41()
