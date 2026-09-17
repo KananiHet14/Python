@@ -6,9 +6,15 @@ from = it is a keywords that used to import function to specific library from sp
 random.choise() = used to take a random choise from  porvided data
 random.randint() = used to get random number between range
 random.shuffle() = used to shuffle items in list
+import statistics = used for statistics python inbuilt functions
+statistics.mean() = used to get average of provided numberse
+import sys = variables and functions that interact directly with the Python interpreter and runtime environment
+
 """
 
-import random # or u can use from random import choice
+# import random # or u can use from random import choice
+# import statistics 
+# import sys
 
 # your_choice = input("Enter heads or tails : ").strip().lower()
 # coin = random.choice(["heads" , "tails"])
@@ -28,3 +34,12 @@ import random # or u can use from random import choice
 # random.shuffle(choise)
 # for cards in choise:
 #     print(cards)
+
+# statistics.mean()
+# average = [99 , 97 , 100 , 45]
+# a = statistics.mean(average)
+# print(a)
+
+
+# sys.argv[]
+# print("My name is " , sys.argv[1])
