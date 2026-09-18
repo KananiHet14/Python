@@ -893,3 +893,33 @@ import cs50
 #             print(bet*multiplier)
 
 # question42()
+
+
+# question 43 : The Corrupted Inventory Matrix
+
+def question43():
+    warehouse = [
+                    ["Laptops", 50, 2],    # [Item, Total Stock, Daily Usage]
+                    ["Keyboards", 100],    # Missing usage data
+                    ["Monitors", "Ten", 5], # String instead of int
+                    ["Mice", 200, 0]       # Zero usage
+                ]
+    fail_audit = 0
+    for item in warehouse:
+        try:
+            days = item[1]/item[2]
+        except IndexError:
+            print(f"{item[0]} is missing data.")
+            fail_audit += 1
+        except TypeError:
+            print(f"{item[0]} contains invalid text")
+            fail_audit += 1
+        except ZeroDivisionError:
+            print(f"{item[0]} has zero usage.")
+            fail_audit += 1
+        else:
+            print(f"{item[0]}: {round(days)} days remaining.")
+
+    print(f"total failed audits : {fail_audit}")
+        
+question43()
