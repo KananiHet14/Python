@@ -823,6 +823,8 @@
 
 import sys
 import statistics
+import random
+import cs50
 
 # question 40 project : The Command-Line Data Auditor
 
@@ -871,3 +873,23 @@ import statistics
 #                 print("Unknown role")
 
 # question41()
+
+# question 42 : The Casino Shuffler & Payout Engine
+
+# def question42():
+#     bet = get_int()
+
+# def get_int():
+#         deck = ["Ace", "King", "Queen", "Jack", "10", "9"]
+#         sfl = random.shuffle(deck)
+#         while True:
+#             try:
+#                 bet = int(input("Enter the bet amount : "))
+#             except ValueError:
+#                 print("ERROR : enter the invalid bet amount type...!")
+#                 break
+#             card = random.choice(deck)
+#             multiplier = 5 if card == "Ace" else 0
+#             print(bet*multiplier)
+
+# question42()
