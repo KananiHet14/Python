@@ -923,3 +923,49 @@ import cs50
 #     print(f"total failed audits : {fail_audit}")
         
 # question43()
+
+
+# question 44 : The Master Terminal
+# import statistics
+# import random
+
+# def question44():
+#     system_memory = []
+    
+#     while True:
+#         print("\nSelect command: \n1: add \n2: average \n3: random \n4: clear \n5: exit")
+#         cmd = input("Enter the command: ").strip().lower()
+        
+#         try:
+#             match cmd:
+#                 case "add" | "1":
+#                     try:
+#                         num = int(input("Enter a number: "))
+#                         system_memory.append(num)
+#                     except ValueError:
+#                         print("You entered the wrong value type, make sure it is an integer.")
+                        
+#                 case "average" | "2":
+#                     try:
+#                         print(f"The average is: {statistics.mean(system_memory)}")
+#                     except statistics.StatisticsError:
+#                         print("Can't calculate average: no memory data found.")
+                        
+#                 case "random" | "3":
+#                     try:
+#                         random_index = random.randint(0, len(system_memory))
+#                         print(f"Random item: {system_memory[random_index]}")
+#                     except IndexError:
+#                         print("Cannot pick a random item: The list is empty or index is out of bounds.")
+                        
+#                 case "clear" | "4":
+#                     system_memory.clear()
+#                     print("Memory cleared.")
+                    
+#                 case "exit" | "5":
+#                     break
+#         finally:
+#             # This will now trigger after EVERY command, even if you clear the list or exit!
+#             print(f"Current Memory Size: {len(system_memory)}")
+
+# question44()
