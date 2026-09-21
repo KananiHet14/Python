@@ -1024,7 +1024,6 @@ import cs50
 #                 ["GOOG", 8000, 0],    # Zero shares
 #                 ["AMZN", "Ten", 5]    # Text instead of int
 #             ]
-
 #     for trade in trades:
 #         if(trade[1] == 0):
 #             print("Ignoring zero-value trade.")
