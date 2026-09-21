@@ -15,9 +15,18 @@ get_float = same as int (just catch is its for decimal values) cs50 library
 get_string = (its for strings) cs50 library
 pass = ignoring expected errors and defining custom exception classes.
 function arguments = the specific values you pass into a function when you call it.
+sys.argv = uilt-in list that stores the command-line arguments passed to a Python script when it is executed.
+sys.exit = is the standard, production-safe method to terminate a Python script.
+sys.argv[1:] = is used to capture all the command-line arguments passed to a script, while deliberately skipping the script's filename.
+pip = usesd to install a packages or library or framewroks.
+__name__ = to help you check whether your Python script is being run directly as the main program or if it is being imported into another script.
+
 """
 
 import cs50
+import statistics
+import sys
+import random
 
 # Basic example of try:except
 # n = 10
@@ -149,3 +158,32 @@ import cs50
 #             pass
 
 # main()
+
+# sys.exit()
+# if len(sys.argv) < 2:
+#     sys.exit("Too few arguments")
+# elif len(sys.argv) > 2:
+#     sys.exit("Too many arguments")
+
+# print("hello, my name is", sys.argv[1])
+
+# sys.argv[1:]
+# if len(sys.argv) < 2:
+#     sys.exit("Too few arguments")
+
+# for arg in sys.argv[1:]:
+#     print("hello, my name is", arg)
+
+
+
+# __name__ 
+# def main():
+#     goodbye("world")
+# def hello(name):
+#     print(f"hello, {name}")
+# def goodbye(name):
+#     print(f"goodbye, {name}")
+
+
+# if __name__ == "__main__":
+#     main()
