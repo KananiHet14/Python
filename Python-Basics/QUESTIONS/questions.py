@@ -995,5 +995,20 @@ import cs50
 #         if(temp > avg_temp):
 #             print(f"WARNING: {temp} is above the {round(avg_temp, 1)} average!")
 
-# question45()
-
+# question46() = The E-Commerce Fraud Engine
+# def question46():
+#     transactions = ["alice-500", "bob-50", "charlie", "diana-9000", "eve-error"]
+#     for i in transactions:
+#         i = i.split("-")
+#         try:
+#             i = int(i[1])
+#         except IndexError:
+#             print("Fraud Alert: Missing amount data.")
+#         except ValueError:
+#             print("Fraud Alert: Corrupted amount.")
+#         else:
+#             status = "Flagged" if i > 1000 else "Clear"
+#             if(status == "Flagged"):
+#                 pin = random.randint(1000, 9999)
+#                 print(f"Account Locked. Verification PIN {pin} sent to user.")
+# question46()
