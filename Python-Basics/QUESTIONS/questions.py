@@ -1037,3 +1037,44 @@ import cs50
 #         else:
 #             print(f"{trade[0]} executed at ${round(price_per_share, 2)} per share.")
 # question47()
+
+# question 48 : The Autonomous Drone Controller
+# def question48():
+#     altitude_integer = get_int()
+# def get_int():
+#     current_altitude = 0
+#     while True:
+#         print("commands : \n1 : climb \n2 : descend \n3 : status \n4 : exit")
+#         command = input("Enter the command : ").strip().lower()
+#         try:
+#             match command:
+#                 case "climb" | "1":
+#                     while True:
+#                         try:
+#                             altitude_integer = int(input("Enter the altitude : "))
+#                             current_altitude += altitude_integer
+#                             break
+#                         except ValueError:
+#                             print("Invalid input. Please enter a whole number.")
+#                 case "descend" | "2":
+#                     while True:
+#                         try:
+#                             altitude_integer = int(input("Enter the altitude : "))
+#                             current_altitude -= altitude_integer
+#                             if current_altitude < 0 or current_altitude == 0:
+#                                 current_altitude = 0 
+#                             break
+#                         except ValueError:
+#                             print("Invalid input. Please enter a whole number.")
+#                         break
+#                 case "status" | "3":
+#                     try:
+#                         print(drone_battery)
+#                     except NameError:
+#                         print("Warning: Battery sensor disconnected.")
+#                 case "exit" | "4":
+#                     break
+#         finally:
+#             print(f"Altitude locked at {current_altitude}m.")
+
+# question48()
