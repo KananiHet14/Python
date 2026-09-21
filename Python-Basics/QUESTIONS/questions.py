@@ -969,3 +969,31 @@ import cs50
 #             print(f"Current Memory Size: {len(system_memory)}")
 
 # question44()
+
+# question 45 : Project 1: The Command-Line Sensor Calibrator
+
+# def question45():
+#     arguments = sys.argv[1:]
+#     clean_temps = []
+#     for i in arguments:
+#         i = i.strip()
+#         try:
+#             str_flt = float(i)
+#             clean_temps.append(str_flt)
+#         except ValueError:
+#             pass
+#     try:
+#         avg_temp = statistics.mean(clean_temps)
+#     except ZeroDivisionError:
+#         print("here is zero in list")
+#     except statistics.StatisticsError:
+#         print("zero values in the list not able to calculate average")
+#         if not clean_temps:
+#             sys.exit()
+
+#     for temp in clean_temps:
+#         if(temp > avg_temp):
+#             print(f"WARNING: {temp} is above the {round(avg_temp, 1)} average!")
+
+# question45()
+
