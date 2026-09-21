@@ -1105,3 +1105,24 @@ import cs50
 #             print(f"Average Load: {round(avg_load, 2)}")
 
 # question49()
+
+# question 50 : project 6 : The Core System Decryptor
+# def question50():
+#     encrypted_logs = ["ACCESS-404", "ROOT-NaN", "USER-200", "GUEST", "ADMIN-500"]
+#     decrypted_count = 0
+#     for log in encrypted_logs:
+#         parts = log.split("-")
+#         try:
+#             level_check = int(parts[1])
+#         except IndexError:
+#             print("Log Error: Missing clearance level.")
+#         except ValueError:
+#             print("Log Error: Corrupted clearance data.")
+#         else:
+#             decrypted_count += 1
+#             status = "Superuser" if parts[0] == "ADMIN" else "Standard"
+#             print(f"{parts[0]} authenticated as {status} with level {parts[1]}.")
+#     if(decrypted_count == 3):
+#         random_number = random.randint(10000, 99999)
+#         print(f"ACHIEVEMENT UNLOCKED: 50 Questions Completed! Your master key is {random_number}.")
+# question50()
