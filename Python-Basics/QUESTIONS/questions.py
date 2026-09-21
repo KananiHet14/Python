@@ -995,7 +995,7 @@ import cs50
 #         if(temp > avg_temp):
 #             print(f"WARNING: {temp} is above the {round(avg_temp, 1)} average!")
 
-# question46() = The E-Commerce Fraud Engine
+# question 46 : Project 2 :  The E-Commerce Fraud Engine
 
 # def question46():
 #     transactions = ["alice-500", "bob-50", "charlie", "diana-9000", "eve-error"]
@@ -1015,7 +1015,7 @@ import cs50
 # question46()
 
 
-# question 47 : The Financial Market Routing Matrix
+# question 47 : Project 3 : The Financial Market Routing Matrix
 
 # def question47():
 #     trades = [
@@ -1038,7 +1038,7 @@ import cs50
 #             print(f"{trade[0]} executed at ${round(price_per_share, 2)} per share.")
 # question47()
 
-# question 48 : The Autonomous Drone Controller
+# question 48 : Project 4 : The Autonomous Drone Controller
 # def question48():
 #     altitude_integer = get_int()
 # def get_int():
@@ -1078,3 +1078,30 @@ import cs50
 #             print(f"Altitude locked at {current_altitude}m.")
 
 # question48()
+
+# question 49 : Project 5: The Master Server OS
+# def question49():
+#     active_users = {"admin": [50, 60, 45], "guest": []}
+#     while True:
+#         user_name = input("Enter the username : ").strip().lower()
+#         if(user_name == "shutdown"):
+#             break
+#         try:
+#             user_data = active_users[user_name]
+#         except KeyError:
+#             print("User not found.")
+#             continue
+
+#         new_ping = random.randint(0, 100)
+#         user_data.append(new_ping)
+
+#         try:
+#             avg_load = statistics.mean(active_users[user_name])
+#         except statistics.StatisticsError:
+#             print("list is empty")
+#         else:
+#             print(f"User: {user_name}")
+#             print(f"Loads: {active_users[user_name]}")
+#             print(f"Average Load: {round(avg_load, 2)}")
+
+# question49()
