@@ -1013,3 +1013,28 @@ import cs50
 #                 pin = random.randint(1000, 9999)
 #                 print(f"Account Locked. Verification PIN {pin} sent to user.")
 # question46()
+
+
+# question 47 : The Financial Market Routing Matrix
+
+# def question47():
+#     trades = [
+#                 ["AAPL", 5000, 50],   # Ticker, Total Value, Shares
+#                 ["TSLA", 0, 10],      # Zero value
+#                 ["GOOG", 8000, 0],    # Zero shares
+#                 ["AMZN", "Ten", 5]    # Text instead of int
+#             ]
+
+#     for trade in trades:
+#         if(trade[1] == 0):
+#             print("Ignoring zero-value trade.")
+#             continue
+#         try:
+#             price_per_share = trade[1] / trade[2] 
+#         except TypeError:
+#             print(f"Data error for {trade[0]}.")
+#         except ZeroDivisionError:
+#             print(f"Trade halted for {trade[0]}: Cannot divide by zero shares.")
+#         else:
+#             print(f"{trade[0]} executed at ${round(price_per_share, 2)} per share.")
+# question47()
