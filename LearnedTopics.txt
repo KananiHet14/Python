@@ -75,16 +75,11 @@ x       f
 # get_string = (its for strings) cs50 library
 # pass = ignoring expected errors and defining custom exception classes.
 # function arguments = the specific values you pass into a function when you call it.
-module = its a library that have a one or more functions to built in. its used for reusability of code.
-random = python come with random library you will get modules and library when oyu install python first by default.
-import = it is a keywords that allows you ot import functions from library.
-from = it is a keywords that used to import function to specific library from specific function.
-random.choise() = used to take a random choise from  porvided data
-random.randint() = used to get random number between range
-random.shuffle() = used to shuffle items in list
-import statistics = used for statistics python inbuilt functions
-statistics.mean() = used to get average of provided numberse
-import sys = variables and functions that interact directly with the Python interpreter and runtime environment
+# sys.argv = uilt-in list that stores the command-line arguments passed to a Python script when it is executed.
+# sys.exit = is the standard, production-safe method to terminate a Python script.
+# sys.argv[1:] = is used to capture all the command-line arguments passed to a script, while deliberately skipping the script's filename.
+# pip = usesd to install a packages or library or framewroks.
+# __name__ = to help you check whether your Python script is being run directly as the main program or if it is being imported into another script.
 
 """
 
@@ -351,6 +346,9 @@ import sys = variables and functions that interact directly with the Python inte
 #     print()
 
 import cs50
+import statistics
+import sys
+import random
 
 # Basic example of try:except
 # n = 10
@@ -483,34 +481,31 @@ import cs50
 
 # main()
 
-# import random # or u can use from random import choice
-# import statistics 
-# import sys
+# sys.exit()
+# if len(sys.argv) < 2:
+#     sys.exit("Too few arguments")
+# elif len(sys.argv) > 2:
+#     sys.exit("Too many arguments")
 
-# your_choice = input("Enter heads or tails : ").strip().lower()
-# coin = random.choice(["heads" , "tails"])
+# print("hello, my name is", sys.argv[1])
 
-# if(your_choice == coin):
-#     print("you win")
-# elif(your_choice != coin):
-#     print("you lose")
-# else:
-#     print("please enter a valid inputs")
+# sys.argv[1:]
+# if len(sys.argv) < 2:
+#     sys.exit("Too few arguments")
 
-# random.radint()
-# print(random.randint(1,10))
-
-# random.shuffle()
-# choise = ["Jack" , "Queen" , "King" , "Ace"]
-# random.shuffle(choise)
-# for cards in choise:
-#     print(cards)
-
-# statistics.mean()
-# average = [99 , 97 , 100 , 45]
-# a = statistics.mean(average)
-# print(a)
+# for arg in sys.argv[1:]:
+#     print("hello, my name is", arg)
 
 
-# sys.argv[]
-# print("My name is " , sys.argv[1])
+
+# __name__ 
+# def main():
+#     goodbye("world")
+# def hello(name):
+#     print(f"hello, {name}")
+# def goodbye(name):
+#     print(f"goodbye, {name}")
+
+
+# if __name__ == "__main__":
+#     main()
