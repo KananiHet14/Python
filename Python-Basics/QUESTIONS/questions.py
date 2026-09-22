@@ -1126,3 +1126,167 @@ import cs50
 #         random_number = random.randint(10000, 99999)
 #         print(f"ACHIEVEMENT UNLOCKED: 50 Questions Completed! Your master key is {random_number}.")
 # question50()
+
+
+# question 51 : PROJECT
+
+import sys
+import random
+import statistics
+
+inventory = {
+    "coffee": {"price": 3.50, "stock": 10},
+    "energy": {"price": 5.00, "stock": 5},
+    "chips":  {"price": 2.00, "stock": 15}
+}
+
+active_users = set()
+session_history = []
+rental_rates = (4.00, 7.50, 10.00)
+
+def get_int(prompt):
+    while True:
+        try:
+            return int(input(prompt).strip())
+        except ValueError:
+            print("System Error: Please enter a valid whole number.")
+
+def get_string(prompt):
+    while True:
+        val = input(prompt).strip()
+        if len(val) > 0:
+            return val
+        print("System Error: Input cannot be blank.")
+
+def run_network_diagnostic():
+    print("\n--- Running Network Diagnostics ---")
+    ping_times = []
+    
+    for _ in range(5):
+        ping_times.append(random.randint(10, 150))
+        
+    try:
+        avg_ping = statistics.mean(ping_times)
+        assert avg_ping < 100, f"Critical Latency! Average ping is {round(avg_ping)}ms."
+    except AssertionError as error:
+        print(f"DIAGNOSTIC FAILED: {error}")
+        return False
+    except statistics.StatisticsError:
+        print("DIAGNOSTIC FAILED: No ping data collected.")
+        return False
+    else:
+        print(f"Network Stable. Average ping: {round(avg_ping)}ms.")
+        return True
+    finally:
+        print("--- Diagnostic Complete ---\n")
+
+def process_purchase():
+    print("\n--- Snack Bar ---")
+    for item in inventory:
+        print(f"- {item.title()} : ${inventory[item]['price']} (Stock: {inventory[item]['stock']})")
+    
+    choice = get_string("What would you like to buy? ").lower()
+    
+    try:
+        stock_level = inventory[choice]["stock"]
+        assert stock_level > 0, f"Sorry, {choice.title()} is completely out of stock!"
+        
+        inventory[choice]["stock"] -= 1
+        print(f"Success! Dispensing {choice.title()}.")
+    except KeyError:
+        print(f"Error: '{choice}' is not on the menu.")
+    except AssertionError as error:
+        print(error)
+
+def calculate_stats():
+    print("\n--- Server Statistics ---")
+    try:
+        avg_session = statistics.mean(session_history)
+        print(f"Total historical sessions: {len(session_history)}")
+        print(f"Average session length: {round(avg_session, 1)} hours")
+    except statistics.StatisticsError:
+        print("Warning: No session history available to calculate statistics.")
+    except ZeroDivisionError:
+        print("Warning: Math error on zero sessions.")
+
+def main():
+    args = sys.argv[1:]
+    
+    if not args:
+        print("FATAL ERROR: System requires an admin start code.")
+        sys.exit(1)
+        
+    try:
+        admin_code = int(args[0])
+    except ValueError:
+        print("FATAL ERROR: Admin code must be an integer.")
+        sys.exit(1)
+        
+    if (admin_code << 1) == 4:
+        print("--- SECRET OVERRIDE ACCEPTED ---")
+    else:
+        print(f"--- SYSTEM BOOTED WITH STANDARD CODE {admin_code} ---")
+
+    while True:
+        print("\n" + "="*30)
+        print("CYBER CAFE OS - MAIN MENU")
+        print("="*30)
+        print("1. Login User")
+        print("2. Buy Item")
+        print("3. Rent PC")
+        print("4. Network Ping Test")
+        print("5. Server Stats")
+        print("6. Exit")
+        
+        command = get_string("Enter command number: ")
+        
+        match command:
+            case "1":
+                user = get_string("Enter new username: ").title()
+                if user is not None:
+                    active_users.add(user)
+                    print(f"User {user} logged in. Active users: {len(active_users)}")
+                    
+            case "2":
+                process_purchase()
+                
+            case "3":
+                if len(active_users) == 0:
+                    print("Error: Please login a user first.")
+                    continue 
+                    
+                print(f"Rates: 1hr=${rental_rates[0]}, 2hr=${rental_rates[1]}, 3hr=${rental_rates[2]}")
+                hours = get_int("How many hours do you want to rent (1-3)? ")
+                
+                try:
+                    cost = rental_rates[hours - 1] 
+                    lucky = random.choice([True, False])
+                    final_cost = cost - 1.00 if lucky else cost
+                    
+                    print(f"PC unlocked for {hours} hours. Cost: ${final_cost}")
+                    
+                    if lucky:
+                        print("You got a $1.00 lucky discount!")
+                        
+                    session_history.append(hours)
+                    
+                except IndexError:
+                    print("Error: You can only rent for 1, 2, or 3 hours.")
+                    
+            case "4":
+                run_network_diagnostic()
+                
+            case "5":
+                calculate_stats()
+                
+            case "6" | "exit":
+                print("Initiating system shutdown...")
+                break 
+                
+            case _:
+                print("Invalid command. Please select a number from 1 to 6.")
+
+    print("\nSystem offline. Have a great day!")
+    sys.exit(0)
+
+main()
