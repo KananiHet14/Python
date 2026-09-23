@@ -1128,4 +1128,50 @@ import cs50
 # question50()
 
 
-# question 51 : PROJECT
+# question 51 : PROJECT : The CLI Server Ping Validator
+
+# def question51():
+#     ping_args = sys.argv[1:]
+#     valid_pings = []
+
+#     for arg in ping_args:
+#         try:
+#             arg = float(arg)
+#             valid_pings.append(arg)
+#         except ValueError:
+#             print("false value type")
+
+#     try:
+#         assert len(valid_pings) > 0, "CRITICAL: No valid pings recorded."
+#         print(statistics.mean(valid_pings))
+#     except AssertionError:
+#         print("Assertion error !")
+#         sys.exit(1)
+        
+# question51()
+
+
+# question 52 : The Mock Pytest QA Engine
+
+# def verify_access(user_db, username, pin):
+#     try:
+#         user_data = user_db[username]
+#     except KeyError:
+#         return "Invalid User"
+#     else:
+#         return "Granted" if pin == user_data else "Denied"
+
+
+# def test_verify_access():
+#     mock_db = {
+#         "admin": 1234,
+#         "guest": 0
+#     }
+
+#     assert verify_access(mock_db, "admin", 1234) == "Granted"
+#     assert verify_access(mock_db, "admin", 9999) == "Denied"
+#     assert verify_access(mock_db, "hacker", 0) == "Invalid User"
+
+#     print("All unit tests passed successfully!")
+
+# test_verify_access()
