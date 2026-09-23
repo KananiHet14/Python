@@ -1151,7 +1151,7 @@ import cs50
 # question51()
 
 
-# question 52 : The Mock Pytest QA Engine
+# question 52 : PROJECT : The Mock Pytest QA Engine
 
 # def verify_access(user_db, username, pin):
 #     try:
@@ -1175,3 +1175,24 @@ import cs50
 #     print("All unit tests passed successfully!")
 
 # test_verify_access()
+
+
+# question 53 : PROJECT : The Recursive Anomaly Scanner
+# def question53():
+#     try:
+#         sector_count = int(sys.argv[1])
+#     except (IndexError , ValueError):
+#         sys.exit("Usage Error: Please provide an integer.")
+
+#     for i in range(sector_count):
+#         readings = [random.randint(0 , 100) for _ in range(3)]
+#         avg_radiation = statistics.mean(readings)
+#         try:
+#             assert avg_radiation < 85, "RADIATION SPIKE DETECTED!"
+#         except AssertionError:
+#             print("error")
+#             break
+#         else:
+#             print(f"Sector {i} clear. Avg: {avg_radiation}")
+
+# question53()
