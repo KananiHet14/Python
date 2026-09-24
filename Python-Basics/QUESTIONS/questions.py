@@ -1196,3 +1196,41 @@ import cs50
 #             print(f"Sector {i} clear. Avg: {avg_radiation}")
 
 # question53()
+
+# question 54 : PROJECT :  The Stateful Robot API
+# def question54():
+#     weight = get_int()
+# def get_int():
+#     robot = {
+#                 "battery": 100, 
+#                 "cargo": 0
+#             }
+#     while True:
+#         command = input("1.move\n2.load\n3.status\n4.reboot\nEnter the command or command number here : ").strip().lower()
+#         match command:
+#             case "move" | "1":
+#                 try:
+#                     assert robot["battery"] >= 10, "Not enough battery to move."
+#                     robot["battery"] -= 10
+#                     print("Robot moved.")
+#                 except AssertionError as error:
+#                     print(f"System Error: {error}")
+#                     continue
+#             case "load" | "2":
+#                 try:
+#                     weight = int(input("Enter the weight of cargo that you want to load : "))
+#                     assert (robot["cargo"] + weight) <= 50, "Weight limit exceeded."
+#                     robot["cargo"] += weight
+#                 except ValueError:
+#                     print("System Error: Please enter a valid number.")
+#                     continue
+#                 except AssertionError:
+#                     print(f"System Error: {error}")
+#                     continue
+#             case "status" | "3":
+#                 print(robot)
+#             case "reboot" | "4":
+#                 print("Shutting down OS...")
+#                 sys.exit(0)
+
+# question54()
