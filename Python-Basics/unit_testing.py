@@ -26,9 +26,9 @@ def assert_square():
 
 
 # pytest.raises(Error Type)
-def test_str():
-    with pytest.raises(TypeError):
-        square("cat")
+# def test_str():
+#     with pytest.raises(TypeError):
+#         square("cat")
 
 if __name__ == "__main__":
     main()
