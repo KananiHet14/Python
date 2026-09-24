@@ -12,18 +12,23 @@ def main():
 #         print("function not work")
 
 def assert_square():
-    # assert square(2) == 4
-    # assert square(3) != 9 # AssertionError = for assert error
+    assert square(2) == 4
+    assert square(3) != 9 # AssertionError = for assert error
 
-    try:
-        assert square(2) == 4
-    except AssertionError:
-        print("2 square was not 4")
-    try:
-        assert square(3) != 9
-    except AssertionError:
-        print("3 square is 9 you used wrong operator use ==")
+#     try:
+#         assert square(2) == 4
+#     except AssertionError:
+#         print("2 square was not 4")
+#     try:
+#         assert square(3) != 9
+#     except AssertionError:
+#         print("3 square is 9 you used wrong operator use ==")
 
+
+# pytest.raises(Error Type)
+def test_str():
+    with pytest.raises(TypeError):
+        square("cat")
 
 if __name__ == "__main__":
     main()

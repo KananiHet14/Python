@@ -8,6 +8,8 @@ firstly testing square function in the anotherfile which name is "unit_testing.p
 assert = keyword in Python is a debugging aid used to test if a specific condition in your code evaluates to True.
          If the condition is True, the program continues executing normally. If the condition evaluates to False,
          Python immediately halts the program and raises an AssertionError.
+pytest it is a python inbuilt unit testing library.
+pytest.raisesErrorType) = is used to assert that a specific block of code raises an expected exception
 """
 import pytest
 def main():
