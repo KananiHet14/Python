@@ -1234,3 +1234,31 @@ import cs50
 #                 sys.exit(0)
 
 # question54()
+
+
+
+# question 55 : PROJECT : The CI/CD Pipeline Simulator
+# arguments = sys.argv[1:]
+# if not arguments:
+#     sys.exit("Fatal: No commits provided in terminal.")
+# def run_diagnostics():
+#     random_server_load = random.randint(0, 100)
+#     random_error_rate = random.randint(0, 10)
+#     return random_server_load , random_error_rate
+# server_loads = []
+# for commit in arguments:
+#     load , error_rate = run_diagnostics()
+#     try:
+#         assert  load < 80, "Server load critical."
+#         assert error_rate < 5, "Too many bugs."
+#     except AssertionError as e:
+#         print(f"Deployment of {commit} failed: {e}")
+#         sys.exit("Pipeline halted to prevent global outage.")
+#     else:
+#         print(f"Commit {commit} passed tests.")
+#         server_loads.append(load)
+#     finally:
+#         print("--- Diagnostic cycle complete ---")
+# avg_load = statistics.mean(server_loads)
+# status = "Stable" if avg_load < 50 else "Warning"
+# print(avg_load)
