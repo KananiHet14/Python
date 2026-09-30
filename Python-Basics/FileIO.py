@@ -51,8 +51,8 @@ comma saperator = basically it is work on csv file with oindexing like row[0] , 
 # for name in sorted(names , reverse=True):
 #     print(f"hello , {name}")
 
-# 
-with open("FileIO.csv") as file:
-    for line in file:
-       row =  line.rstrip().split(",")
-       print(f"{row[0]} is {row[1]}")
+# CSV  file reade and open
+# with open("FileIO.csv") as file:
+#     for line in file:
+#        row =  line.rstrip().split(",")
+#        print(f"{row[0]} is {row[1]}")
