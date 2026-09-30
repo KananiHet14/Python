@@ -7,6 +7,7 @@ open =  in Python is a built-in function used to open files on your computer, re
 with.....as = statement acts as a context manager that automatically handles opening and safely closing a file.
 .sorted() = this is a list function that used to sort list
 reverse = True : built-in parameter used to sort data in descending order   
+comma saperator = basically it is work on csv file with oindexing like row[0] , row[1] typed.
 """
 
 # name = input("enter your name  :  ")
@@ -49,3 +50,9 @@ reverse = True : built-in parameter used to sort data in descending order
 #         names.append(line.rstrip())
 # for name in sorted(names , reverse=True):
 #     print(f"hello , {name}")
+
+# 
+with open("FileIO.csv") as file:
+    for line in file:
+       row =  line.rstrip().split(",")
+       print(f"{row[0]} is {row[1]}")
