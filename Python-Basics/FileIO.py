@@ -9,6 +9,8 @@ with.....as = statement acts as a context manager that automatically handles ope
 reverse = True : built-in parameter used to sort data in descending order   
 comma saperator = basically it is work on csv file with oindexing like row[0] , row[1] typed.
 var1,var2 = Python takes the first item from that list and assigns it to var 1, and takes the second item and assigns it to var2.
+get_name() = it is a helper function. it extract specific piece of data.
+key = it is thee parameter which act as a sorting rule.
 """
 
 # name = input("enter your name  :  ")
@@ -59,7 +61,7 @@ var1,var2 = Python takes the first item from that list and assigns it to var 1, 
 #        print(f"{row[0]} is {row[1]}")
 
 
-# double variable
+# double variable declaration
 # students = []
 # with open("FileIO.csv") as file:
 #     for line in file:
@@ -67,3 +69,15 @@ var1,var2 = Python takes the first item from that list and assigns it to var 1, 
 #         students.append(f"{name} is {surname}")
 # for student in sorted(students):
 #     print(student)
+
+# double variable declaration in dict and sort it
+# students = []
+# with open("FileIO.csv") as file:
+#     for line in file:
+#         name , surname = line.strip().split(",")
+#         student = {"name" : name , "surname" : surname}
+#         students.append(student)
+# def get_name(student):
+#     return student["name"]
+# for student in sorted(students , key=get_name):
+#     print(f"{student['name']} is {student['surname']}")
