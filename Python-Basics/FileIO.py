@@ -6,6 +6,7 @@ open =  in Python is a built-in function used to open files on your computer, re
 'a' mode = (Append mode) inside the open() function allows you to add new data to the end of an existing file without erasing its current content.
 with.....as = statement acts as a context manager that automatically handles opening and safely closing a file.
 .sorted() = this is a list function that used to sort list
+reverse = True : built-in parameter used to sort data in descending order   
 """
 
 # name = input("enter your name  :  ")
@@ -39,4 +40,12 @@ with.....as = statement acts as a context manager that automatically handles ope
 #     for line in file:
 #         names.append(line.rstrip())
 # for name in sorted(names):
+#     print(f"hello , {name}")
+
+# reverse
+# names = []
+# with open("FileIO.txt") as file:
+#     for line in file:
+#         names.append(line.rstrip())
+# for name in sorted(names , reverse=True):
 #     print(f"hello , {name}")
