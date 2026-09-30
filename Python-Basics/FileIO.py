@@ -8,6 +8,7 @@ with.....as = statement acts as a context manager that automatically handles ope
 .sorted() = this is a list function that used to sort list
 reverse = True : built-in parameter used to sort data in descending order   
 comma saperator = basically it is work on csv file with oindexing like row[0] , row[1] typed.
+var1,var2 = Python takes the first item from that list and assigns it to var 1, and takes the second item and assigns it to var2.
 """
 
 # name = input("enter your name  :  ")
@@ -56,3 +57,13 @@ comma saperator = basically it is work on csv file with oindexing like row[0] , 
 #     for line in file:
 #        row =  line.rstrip().split(",")
 #        print(f"{row[0]} is {row[1]}")
+
+
+# double variable
+# students = []
+# with open("FileIO.csv") as file:
+#     for line in file:
+#         name , surname = line.strip().split(",")
+#         students.append(f"{name} is {surname}")
+# for student in sorted(students):
+#     print(student)
