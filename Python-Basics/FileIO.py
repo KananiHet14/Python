@@ -12,6 +12,8 @@ var1,var2 = Python takes the first item from that list and assigns it to var 1, 
 key = it is thee parameter which act as a sorting rule.
 lambda function = lambda function is a small, anonymous function that is defined without a name using the lambda keyword.
 import csv = to read from and write to Comma-Separated Values (CSV) files and other delimited text formats.
+csv.reader() = to parse and read tabular data from Comma-Separated Values (CSV) files.
+csv.DictReader() = to read CSV files and map each row directly into a Python dictionary
 """
 
 # name = input("enter your name  :  ")
@@ -93,3 +95,24 @@ import csv = to read from and write to Comma-Separated Values (CSV) files and ot
 #         students.append(student)
 # for student in sorted(students , key=lambda student: student["name"]):
 #     print(f"{student['name']} : {student['surname']}")
+
+# import csv library
+import csv
+
+# csv.reader()
+# students = []
+# with open("FileIO.csv") as file:
+#     reader = csv.reader(file)
+#     for name,surname in reader:
+#         students.append({"name":name , "surname":surname})
+# for student in sorted(students , key=lambda student: student["name"]):
+#     print(f"{student['name']} : {student['surname']}")
+
+# csv.DictReader()
+# students = []
+# with open("FileIO.csv") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         students.append({"name":row["name"] , "surname":row["surname"] , "city":row["city"]})
+# for student in sorted(students , key=lambda student: student["name"]):
+#     print(f"{student['name']} : {student['surname']} city is {student['city']}")
