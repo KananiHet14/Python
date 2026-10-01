@@ -9,7 +9,6 @@ with.....as = statement acts as a context manager that automatically handles ope
 reverse = True : built-in parameter used to sort data in descending order   
 comma saperator = basically it is work on csv file with oindexing like row[0] , row[1] typed.
 var1,var2 = Python takes the first item from that list and assigns it to var 1, and takes the second item and assigns it to var2.
-get_name() = it is a helper function. it extract specific piece of data.
 key = it is thee parameter which act as a sorting rule.
 """
 
