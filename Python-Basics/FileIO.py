@@ -116,3 +116,11 @@ import csv
 #         students.append({"name":row["name"] , "surname":row["surname"] , "city":row["city"]})
 # for student in sorted(students , key=lambda student: student["name"]):
 #     print(f"{student['name']} : {student['surname']} city is {student['city']}")
+
+# write in csv file
+name = input("enter your name : ")
+home = input("enter your home : ")
+
+with open("FileIO.csv" , "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name , home])
