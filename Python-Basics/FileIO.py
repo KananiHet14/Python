@@ -14,6 +14,10 @@ lambda function = lambda function is a small, anonymous function that is defined
 import csv = to read from and write to Comma-Separated Values (CSV) files and other delimited text formats.
 csv.reader() = to parse and read tabular data from Comma-Separated Values (CSV) files.
 csv.DictReader() = to read CSV files and map each row directly into a Python dictionary
+.writerow() = to write a single row of data into a CSV file.
+csv.DictWriter() = to write dictionary data directly into a CSV file
+fieldsname = defines the columns for your CSV file
+import PIL = the original, open-source library that adds image processing capabilities to your Python interpreter
 """
 
 # name = input("enter your name  :  ")
@@ -98,6 +102,8 @@ csv.DictReader() = to read CSV files and map each row directly into a Python dic
 
 # import csv library
 import csv
+from PIL import Image
+import sys
 
 # csv.reader()
 # students = []
@@ -118,9 +124,29 @@ import csv
 #     print(f"{student['name']} : {student['surname']} city is {student['city']}")
 
 # write in csv file
-name = input("enter your name : ")
-home = input("enter your home : ")
+# name = input("enter your name : ")
+# home = input("enter your home : ")
 
-with open("FileIO.csv" , "a") as file:
-    writer = csv.writer(file)
-    writer.writerow([name , home])
+# with open("FileIO.csv" , "a") as file:
+#     writer = csv.writer(file)
+#     writer.writerow([name , home])
+
+
+# csv.DictWriter()
+
+# name = input("enter your name : ")
+# home = input("enter your home : ")
+
+# with open("FileIO.csv" , "a") as file:
+#     writer = csv.DictWriter(file , fieldnames=["name" , "home"])
+#     writer.writerow({"name":name , "home":home})
+
+# import PIL images
+# images = []
+# for arg in sys.argv[1:]:
+#     image = Image.open(arg)
+#     images.append(image)
+
+# images[0].save(
+#     "costumes.gif" , save_all = True , append_images = [images[1]] , duration = 200, loop = 0
+# )
