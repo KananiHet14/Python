@@ -1264,31 +1264,31 @@ import cs50
 # print(avg_load)
 
 
-# question 56 : The Extension Filter
-def question56():
-    # --- Setup: Creating the dummy file for testing ---
-    with open("questions.txt", "w") as file:
-        file.write("data.csv\n")
-        file.write("pic1.png\n")
-        file.write("script.py\n")
-        file.write("logo.jpg\n")
-        file.write("notes.txt\n")
-        file.write("banner.png\n")
-    # --------------------------------------------------
+# # question 56 : The Extension Filter
+# def question56():
+#     # --- Setup: Creating the dummy file for testing ---
+#     with open("questions.txt", "a") as file:
+#         file.write("data.csv\n")
+#         file.write("pic1.png\n")
+#         file.write("script.py\n")
+#         file.write("logo.jpg\n")
+#         file.write("notes.txt\n")
+#         file.write("banner.png\n")
+#     # --------------------------------------------------
 
-    # 1. Open the source file to read, and the target file to write
-    with open("questions.txt", "r") as source_file:
-        with open("images.txt", "w") as target_file:
+#     # 1. Open the source file to read, and the target file to write
+#     with open("questions.txt", "r") as source_file:
+#         with open("images.txt", "w") as target_file:
             
-            # 2. Loop through every line in the source file
-            for line in source_file:
-                # 3. Strip the invisible newline character (\n) and spaces
-                filename = line.strip()
+#             # 2. Loop through every line in the source file
+#             for line in source_file:
+#                 # 3. Strip the invisible newline character (\n) and spaces
+#                 filename = line.strip()
                 
-                # 4. Filter using .endswith()
-                if filename.endswith(".png") or filename.endswith(".jpg"):
+#                 # 4. Filter using .endswith()
+#                 if filename.endswith(".png") or filename.endswith(".jpg"):
                     
-                    # 5. Write the valid filename to the new file, adding the newline back
-                    target_file.write(f"{filename}\n")
+#                     # 5. Write the valid filename to the new file, adding the newline back
+#                     target_file.write(f"{filename}\n")
 
-print("Filtering complete! Check your folder for 'images_only.txt'.")
+# print("Filtering complete! Check your folder for 'images    .txt'.")
