@@ -33,8 +33,9 @@ import re
 #     print("invalid")
 
 # r string
-email = input("Enter your mail id : ").strip()
-if re.search(r"^.+@.+\.com$" , email):
-    print("valid")
+email = input("What's your email? ").strip()
+
+if re.search(r"^.+@.+\.edu$", email):
+    print("Valid")
 else:
-    print("invalid")
+    print("Invalid")
