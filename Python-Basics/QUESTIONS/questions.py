@@ -1262,3 +1262,17 @@ import cs50
 # avg_load = statistics.mean(server_loads)
 # status = "Stable" if avg_load < 50 else "Warning"
 # print(avg_load)
+
+
+# question 56 : The Extension Filter
+def question56():
+    with open("questions.txt" , "r") as file:
+        with open("images_only.txt", "w") as imagefile:
+            lines = file.readlines()
+            for line in lines:
+                line = line.strip()
+                if line.endswith((".jgp" , ".png")):
+                    imagefile.write(line + "\n")
+                    file.close()
+
+question56()
