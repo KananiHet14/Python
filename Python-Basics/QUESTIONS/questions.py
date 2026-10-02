@@ -1266,13 +1266,29 @@ import cs50
 
 # question 56 : The Extension Filter
 def question56():
-    with open("questions.txt" , "r") as file:
-        with open("images_only.txt", "w") as imagefile:
-            lines = file.readlines()
-            for line in lines:
-                line = line.strip()
-                if line.endswith((".jgp" , ".png")):
-                    imagefile.write(line + "\n")
-                    file.close()
+    # --- Setup: Creating the dummy file for testing ---
+    with open("questions.txt", "w") as file:
+        file.write("data.csv\n")
+        file.write("pic1.png\n")
+        file.write("script.py\n")
+        file.write("logo.jpg\n")
+        file.write("notes.txt\n")
+        file.write("banner.png\n")
+    # --------------------------------------------------
 
-question56()
+    # 1. Open the source file to read, and the target file to write
+    with open("questions.txt", "r") as source_file:
+        with open("images.txt", "w") as target_file:
+            
+            # 2. Loop through every line in the source file
+            for line in source_file:
+                # 3. Strip the invisible newline character (\n) and spaces
+                filename = line.strip()
+                
+                # 4. Filter using .endswith()
+                if filename.endswith(".png") or filename.endswith(".jpg"):
+                    
+                    # 5. Write the valid filename to the new file, adding the newline back
+                    target_file.write(f"{filename}\n")
+
+print("Filtering complete! Check your folder for 'images_only.txt'.")
