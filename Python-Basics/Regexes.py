@@ -11,6 +11,8 @@ re.search() = to scan an entire string to find the first occurrence of a regular
 {m,n} = m-n repetitions
 ^ = matches the start of the string
 $ = matches the end of the string or just before the newline at the end of the string
+[] = set of character
+[^] = complementing the set
 r = it means a raw string to ignore backslash escape sequence
 """
 
@@ -32,10 +34,10 @@ import re
 # else:
 #     print("invalid")
 
-# r string
-email = input("What's your email? ").strip()
+# r string and expressions
+# email = input("What's your email? ").strip()
 
-if re.search(r"^.+@.+\.edu$", email):
-    print("Valid")
-else:
-    print("Invalid")
+# if re.search(r"^[^@]+@[^@]+\.edu$", email):
+#     print("Valid")
+# else:
+#     print("Invalid")
