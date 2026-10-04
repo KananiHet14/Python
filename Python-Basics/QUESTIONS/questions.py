@@ -1264,52 +1264,53 @@ import cs50
 # print(avg_load)
 
 
-#question56
 import sys
 import csv
 import re
 from PIL import Image
 
-def question56():
-    try:
-        script_read = sys.argv[1]
-    except IndexError:
-        sys.exit("Error: No file provided.")
-        
-    if not script_read:
-        sys.exit("Error: No file provided.")
+#question56
 
-    with open(script_read) as file:
-        reader = csv.DictReader(file)
-        valid_campaigns = []
-        images = []
+# def question56():
+#     try:
+#         script_read = sys.argv[1]
+#     except IndexError:
+#         sys.exit("Error: No file provided.")
         
-        for row in reader:
-            if not re.search(r"^[^@]+@[^@]+\.[a-zA-Z]+$" , row["Email"]):
-                continue
-                
-            try:
-                img = Image.open(row['ImageFile'])
-            except FileNotFoundError:
-                print(f"Error: Image {row['ImageFile']} not found.")
-                continue
-                
-            int_score = int(row['Score'])
-            row['Score'] = int_score
-            valid_campaigns.append(row)
-            images.append(img)
-            
-    with open("report.txt", "w") as reportFile:
-        for srt_cmpn in sorted(valid_campaigns, key=lambda x: x['Score'], reverse=True):
-            reportFile.write(f"{srt_cmpn['Email']} scored {srt_cmpn['Score']}\n")
-            
-    if len(images) >= 1:
-        images[0].save(
-            "marketing_promo.gif",
-            save_all=True,
-            append_images=images[1:],
-            duration=500,
-            loop=0
-        )
+#     if not script_read:
+#         sys.exit("Error: No file provided.")
 
-question56()
+#     with open(script_read) as file:
+#         reader = csv.DictReader(file)
+#         valid_campaigns = []
+#         images = []
+        
+#         for row in reader:
+#             if not re.search(r"^[^@]+@[^@]+\.[a-zA-Z]+$" , row["Email"]):
+#                 continue
+                
+#             try:
+#                 img = Image.open(row['ImageFile'])
+#             except FileNotFoundError:
+#                 print(f"Error: Image {row['ImageFile']} not found.")
+#                 continue
+                
+#             int_score = int(row['Score'])
+#             row['Score'] = int_score
+#             valid_campaigns.append(row)
+#             images.append(img)
+            
+#     with open("report.txt", "w") as reportFile:
+#         for srt_cmpn in sorted(valid_campaigns, key=lambda x: x['Score'], reverse=True):
+#             reportFile.write(f"{srt_cmpn['Email']} scored {srt_cmpn['Score']}\n")
+            
+#     if len(images) >= 1:
+#         images[0].save(
+#             "marketing_promo.gif",
+#             save_all=True,
+#             append_images=images[1:],
+#             duration=500,
+#             loop=0
+#         )
+
+# question56()
