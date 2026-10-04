@@ -1318,39 +1318,39 @@ from PIL import Image
 
 
 # question 57
-def question57():
-    clean_transactions = []
-    amounts = []
-    try:
-        decryption_key = sys.argv[1]
-        decryption_key = int(decryption_key)
-    except ValueError:
-        sys.exit("you porvide wrong vale type provide must be integer")
-    with open("ledger.csv") as file:
-        reader = csv.reader(file)
-        header = next(reader) 
+# def question57():
+#     clean_transactions = []
+#     amounts = []
+#     try:
+#         decryption_key = sys.argv[1]
+#         decryption_key = int(decryption_key)
+#     except ValueError:
+#         sys.exit("you porvide wrong vale type provide must be integer")
+#     with open("ledger.csv") as file:
+#         reader = csv.reader(file)
+#         header = next(reader) 
 
-        for row in reader:
-            try:
-                tx_id, amount_str, date = row
-                real_id = int(tx_id) ^ decryption_key
-                real_amount = float(amount_str)
-                assert real_amount > 0, "Negative transaction detected."
-            except ValueError:
-                print("corrupted data")
-            except AssertionError:
-                print("Security flag: Negative amount.")
-            else:
-                clean_transactions.append([real_id, real_amount, date])
-                amounts.append(real_amount)
+#         for row in reader:
+#             try:
+#                 tx_id, amount_str, date = row
+#                 real_id = int(tx_id) ^ decryption_key
+#                 real_amount = float(amount_str)
+#                 assert real_amount > 0, "Negative transaction detected."
+#             except ValueError:
+#                 print("corrupted data")
+#             except AssertionError:
+#                 print("Security flag: Negative amount.")
+#             else:
+#                 clean_transactions.append([real_id, real_amount, date])
+#                 amounts.append(real_amount)
 
-    avg = statistics.mean(amounts)
+#     avg = statistics.mean(amounts)
 
-    with open("secure_ledger.csv", "w" , newline="") as writefile:
-        writer = csv.writer(writefile)
-        writer.writerows(clean_transactions)
+#     with open("secure_ledger.csv", "w" , newline="") as writefile:
+#         writer = csv.writer(writefile)
+#         writer.writerows(clean_transactions)
         
-    print("Ledger Stable" if avg > 100 else "Ledger Warning")
+#     print("Ledger Stable" if avg > 100 else "Ledger Warning")
 
      
-question57()
+# question57()
