@@ -1,1 +1,0 @@
-data.csv, pic1.png, script.py, logo.jpg, notes.txt, banner.png
