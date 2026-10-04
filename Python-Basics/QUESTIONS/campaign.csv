@@ -1,0 +1,5 @@
+Email,Score,ImageFile
+admin@corp.com,85,promo1.png
+invalid_email,99,promo2.png
+designer@corp.com,92,missing.png
+artist@corp.com,78,promo3.png

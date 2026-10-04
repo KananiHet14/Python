@@ -1,0 +1,3 @@
+designer@corp.com scored 92
+admin@corp.com scored 85
+artist@corp.com scored 78

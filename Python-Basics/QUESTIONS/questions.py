@@ -1264,31 +1264,41 @@ import cs50
 # print(avg_load)
 
 
-# # question 56 : The Extension Filter
-# def question56():
-#     # --- Setup: Creating the dummy file for testing ---
-#     with open("questions.txt", "a") as file:
-#         file.write("data.csv\n")
-#         file.write("pic1.png\n")
-#         file.write("script.py\n")
-#         file.write("logo.jpg\n")
-#         file.write("notes.txt\n")
-#         file.write("banner.png\n")
-#     # --------------------------------------------------
+#question56
+import csv
+from PIL import Image
+import re
 
-#     # 1. Open the source file to read, and the target file to write
-#     with open("questions.txt", "r") as source_file:
-#         with open("images.txt", "w") as target_file:
-            
-#             # 2. Loop through every line in the source file
-#             for line in source_file:
-#                 # 3. Strip the invisible newline character (\n) and spaces
-#                 filename = line.strip()
-                
-#                 # 4. Filter using .endswith()
-#                 if filename.endswith(".png") or filename.endswith(".jpg"):
-                    
-#                     # 5. Write the valid filename to the new file, adding the newline back
-#                     target_file.write(f"{filename}\n")
+def question56():
+    script_read = sys.argv[1]
+    if not script_read:
+        sys.exit("Error: No file provided.")
+    with open(script_read) as file:
+        reader = csv.DictReader(file)
+        valid_campaigns = []
+        images = []
+        for row in reader:
+            if not re.search(r"^[^@]+@[^@]+\.[a-zA-Z]+$" , row["Email"]):
+                continue
+            try:
+                img = Image.open(row['ImageFile'])
+            except FileNotFoundError:
+                print(f"Error: Image {row['ImageFile']} not found.")
+                continue
+            int_score = int(row['Score'])
+            row['Score'] = int_score
+            valid_campaigns.append(row)
+            images.append(img)
+    with open("report.txt" , "w") as reportFile:    
+        for srt_cmpn in sorted(valid_campaigns , key=lambda x: x['Score'] , reverse=True):
+            reportFile.write(f"{srt_cmpn['Email']} scored {srt_cmpn['Score']}\n")
+    if len(images) >= 1:
+        images[0].save(
+            "marketing_promo.gif",
+            save_all=True,
+            append_images=images[1:],
+            duration=500,  
+            loop=0         
+        )
 
-# print("Filtering complete! Check your folder for 'images    .txt'.")
+question56()
