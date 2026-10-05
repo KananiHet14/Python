@@ -1357,83 +1357,83 @@ from PIL import Image
 
 
 # question 58
-def question58():
-    code = sys.argv[1]
-    if (int(code) << 1) != 16:
-        sys.exit("Access Denied.")
+# def question58():
+#     code = sys.argv[1]
+#     if (int(code) << 1) != 16:
+#         sys.exit("Access Denied.")
         
-    quarantined_crew = set()
-    SAFE_VITALS = (70, 100)
+#     quarantined_crew = set()
+#     SAFE_VITALS = (70, 100)
     
-    with open("crew_logs.csv" , "r") as file:
-        csv_reader = csv.DictReader(file)
-        crew_list = list(csv_reader)
+#     with open("crew_logs.csv" , "r") as file:
+#         csv_reader = csv.DictReader(file)
+#         crew_list = list(csv_reader)
 
-    while True:
-        command = input("Enter the command : 1.scan , 2.purge , 3.export , 4.shutdown : ").strip().lower()
+#     while True:
+#         command = input("Enter the command : 1.scan , 2.purge , 3.export , 4.shutdown : ").strip().lower()
         
-        try:
-            match command:
-                case "1" | "scan":
-                    for row in crew_list:
-                        is_infected = re.search(r"^Infected$", row["Status"])
-                        if is_infected:
-                            quarantined_crew.add(row["Astronaut"])
-                    print(f"Quarantined Crew: {quarantined_crew}")
+#         try:
+#             match command:
+#                 case "1" | "scan":
+#                     for row in crew_list:
+#                         is_infected = re.search(r"^Infected$", row["Status"])
+#                         if is_infected:
+#                             quarantined_crew.add(row["Astronaut"])
+#                     print(f"Quarantined Crew: {quarantined_crew}")
                     
-                case "2" | "purge":
-                    purge_crew_list = []
-                    for row in crew_list:
-                        if row["Astronaut"] in quarantined_crew:
-                            continue
+#                 case "2" | "purge":
+#                     purge_crew_list = []
+#                     for row in crew_list:
+#                         if row["Astronaut"] in quarantined_crew:
+#                             continue
                             
-                        try:
-                            vital_float = float(row["Vitals"])
-                            assert vital_float >= SAFE_VITALS[0], "Critical Vitals!"
-                        except ValueError:
-                            continue    
-                        except AssertionError:
-                            continue
+#                         try:
+#                             vital_float = float(row["Vitals"])
+#                             assert vital_float >= SAFE_VITALS[0], "Critical Vitals!"
+#                         except ValueError:
+#                             continue    
+#                         except AssertionError:
+#                             continue
                             
-                        purge_crew_list.append(row)
+#                         purge_crew_list.append(row)
                         
-                    crew_list = purge_crew_list
-                    print(f"Purge complete. Healthy crew remaining: {len(crew_list)}")
+#                     crew_list = purge_crew_list
+#                     print(f"Purge complete. Healthy crew remaining: {len(crew_list)}")
                     
-                case "3" | "export":
-                    sorted_crew = sorted(crew_list, key=lambda x: float(x["Vitals"]), reverse=True)
-                    if sorted_crew:
-                        header = sorted_crew[0].keys()
-                        with open("survivors.csv" , "w" , newline="") as csvfile:
-                            writer = csv.DictWriter(csvfile , fieldnames=header)
-                            writer.writeheader()
-                            writer.writerows(sorted_crew)
+#                 case "3" | "export":
+#                     sorted_crew = sorted(crew_list, key=lambda x: float(x["Vitals"]), reverse=True)
+#                     if sorted_crew:
+#                         header = sorted_crew[0].keys()
+#                         with open("survivors.csv" , "w" , newline="") as csvfile:
+#                             writer = csv.DictWriter(csvfile , fieldnames=header)
+#                             writer.writeheader()
+#                             writer.writerows(sorted_crew)
                             
-                    survivor_images = []
-                    for crew in sorted_crew:
-                        try:
-                            img = Image.open(crew["Avatar"])
-                            survivor_images.append(img)
-                        except FileNotFoundError:
-                            pass 
+#                     survivor_images = []
+#                     for crew in sorted_crew:
+#                         try:
+#                             img = Image.open(crew["Avatar"])
+#                             survivor_images.append(img)
+#                         except FileNotFoundError:
+#                             pass 
                             
-                    if len(survivor_images) >= 1:
-                        survivor_images[0].save(
-                            "survivors.gif",
-                            save_all=True,
-                            append_images=survivor_images[1:],
-                            duration=500,
-                            loop=0
-                        )
-                    print("Export complete: generated survivors.csv and survivors.gif")
+#                     if len(survivor_images) >= 1:
+#                         survivor_images[0].save(
+#                             "survivors.gif",
+#                             save_all=True,
+#                             append_images=survivor_images[1:],
+#                             duration=500,
+#                             loop=0
+#                         )
+#                     print("Export complete: generated survivors.csv and survivors.gif")
                     
-                case "4" | "shutdown":
-                    print("Closing blast doors...")
-                    break
+#                 case "4" | "shutdown":
+#                     print("Closing blast doors...")
+#                     break
                     
-        except Exception as e:
-            print(f"Unexpected OS failure: {e}. Resetting menu...")
-        finally:
-            print("Command executed.")
+#         except Exception as e:
+#             print(f"Unexpected OS failure: {e}. Resetting menu...")
+#         finally:
+#             print("Command executed.")
 
-question58()
+# question58()
