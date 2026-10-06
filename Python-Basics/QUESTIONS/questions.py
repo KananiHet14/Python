@@ -1437,3 +1437,65 @@ from PIL import Image
 #             print("Command executed.")
 
 # question58()
+
+
+# Master question : Satellite Telemetry Pipeline
+# def master_question():
+    
+#     if len(sys.argv) > 2:
+#         print("system back off....")
+#         sys.exit("No file name provided")
+#     file_name = sys.argv[1]
+#     with open(file_name) as file:
+#         reader = csv.DictReader(file)
+#         valid_scans = []
+#         signal_strengths = []
+#         active_satellites = set()
+        
+#         for rows in reader:
+#             pattern = r"^[A-Z]-\d{3}$"
+#             if not re.search(pattern,rows['Sector']):
+#                 continue
+#             try:
+#                 signal = float(rows['Signal'])
+#             except ValueError as e:
+#                 print(f"Skipping corrupted text {e}")
+#                 continue
+#             sat_id = int(rows['SatID'])
+#             result = sat_id ^ 15
+#             if result == 0:
+#                 continue
+#             try:
+#                 assert signal >= 25.0 , "Signal is too weak"
+#             except AssertionError as asrt:
+#                 print(f"skipping weak signals {asrt}")
+#                 continue
+#             rows['Signal'] = signal
+#             active_satellites.add(rows['SatID'])
+#             signal_strengths.append(signal)
+#             valid_scans.append(rows)
+#         if not valid_scans:
+#             sys.exit("No valid data survived the filters.")
+#         sorted_valide_scans = sorted(valid_scans , key=lambda  x: x['Signal'], reverse=True)
+#         with open("processed_telemetry.csv" , "w") as writerfile:
+#             headers = ["SatID", "Sector", "Signal", "ImagePath"]
+#             writer = csv.DictWriter(writerfile , fieldnames=headers)
+#             writer.writerows(sorted_valide_scans)
+#         opened_images = []
+#         for j in sorted_valide_scans:
+#                 try:
+#                     img = Image.open(j['ImagePath'])
+#                     opened_images.append(img)
+#                 except FileNotFoundError:
+#                     pass
+#                 if len(opened_images) >= 1:
+#                     opened_images[0].save(
+#                     "survivors.gif",
+#                     save_all=True,
+#                     append_images=opened_images[1:],
+#                     duration=500,
+#                     loop=0
+#                 )
+#         signal_strength_avg = statistics.mean(signal_strengths)
+#         print(f"the number of unique active satellites {len(active_satellites)} and the average of siganal is {round(signal_strength_avg , 2)}")
+# master_question()

@@ -1,0 +1,7 @@
+SatID,Sector,Signal,ImagePath
+12,A-123,88.5,promo1.png
+15,B-404,95.0,promo2.png
+18,c-99,45.0,promo3.png
+22,X-001,Error,promo4.png
+45,Z-999,12.0,promo5.png
+12,A-124,92.0,missing.png
