@@ -1499,3 +1499,51 @@ from PIL import Image
 #         signal_strength_avg = statistics.mean(signal_strengths)
 #         print(f"the number of unique active satellites {len(active_satellites)} and the average of siganal is {round(signal_strength_avg , 2)}")
 # master_question()
+
+# master_question_2
+# def MasterQuestion2():
+#     if len(sys.argv) < 2:
+#         sys.exit("No argument porvided system back off....!")
+#     reade_filename = sys.argv[1]
+#     valid_scans = []
+#     with open(reade_filename) as file:
+#         reader = csv.DictReader(file)
+#         for row in  reader:
+#             pattern = r"^GHOST-\d{3}$"
+#             if not re.search(pattern , row['Sector']):
+#                 continue
+#             try:
+#                 encryptedsize = int(row['EncryptedSize'])
+#             except ValueError as err:
+#                 print(f"corrupted text , skipping row {err}")
+#                 continue
+#             real_size = encryptedsize ^ 255
+#             row['EncryptedSize'] = real_size
+#             try:
+#                 assert real_size >= 100, "so smaller size...."
+#             except AssertionError as e:
+#                 print(f"encrypted size is small , skipping {e}")
+#                 continue
+#             valid_scans.append(row)
+#         sorted_items = sorted(valid_scans, key=lambda item: item['EncryptedSize'] , reverse=True)
+#         with open("breach_report.csv" , "w") as writeinfile: 
+#             header = ["CommsID", "Sector", "EncryptedSize", "VisualLog"]
+#             writer = csv.DictWriter(writeinfile , fieldnames= header)
+#             writer.writeheader()
+#             writer.writerows(sorted_items)
+#         opened_images = []
+#         for j in sorted_items:
+#                 try:
+#                     img = Image.open(j['VisualLog'])
+#                     opened_images.append(img)
+#                 except FileNotFoundError:
+#                     pass
+#         if len(opened_images) >= 1:
+#             opened_images[0].save(
+#             "hacker_trace.gif",
+#             save_all=True,
+#             append_images=opened_images[1:],
+#             duration=500,
+#             loop=0
+#         )
+# MasterQuestion2()
