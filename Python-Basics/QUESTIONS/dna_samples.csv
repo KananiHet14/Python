@@ -1,0 +1,7 @@
+SampleID,Sequence,Purity,VisualScan
+BIO-12,ACTG,90.5,promo1.png
+BIO-9,ACTG,95.0,promo2.png
+BIO-45,ACTGXX,99.0,promo3.png
+BIO-88,CGTAAC,Error,promo4.png
+BIO-99,AAAT,50.0,promo5.png
+BIO-22,GCTAAT,95.0,missing.png

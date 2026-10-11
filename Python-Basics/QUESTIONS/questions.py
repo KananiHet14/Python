@@ -1547,3 +1547,74 @@ from PIL import Image
 #             loop=0
 #         )
 # MasterQuestion2()
+
+
+# Master Question 3
+# def MasterQuestion3():
+#     if len(sys.argv) < 2:
+#         sys.exit("Please provide a PIN in the terminal.")
+        
+#     try:
+#         pin = int(sys.argv[1])
+#     except ValueError as pn:
+#         sys.exit(f"Please enter a valid pin. Your entered pin is incorrect: {pn}")
+        
+#     if ((pin << 1) != 100):
+#         sys.exit("Unauthorized access")
+
+#     THRESHOLDS = (85.0, 99.9)
+#     valid_samples = []
+#     viability_scores = []
+    
+#     with open("dna_samples.csv") as file:
+#         reader = csv.DictReader(file)
+#         for row in reader:
+#             sample_id_pattern = r"^BIO-\d{2}$"
+#             sequence_pattern = r"^[ACTG]{4,8}$"
+            
+#             if not re.search(sample_id_pattern, row['SampleID']) or not re.search(sequence_pattern, row['Sequence']):
+#                 continue
+            
+#             try:
+#                 fltpurity = float(row['Purity'])
+#                 assert (fltpurity >= THRESHOLDS[0] and fltpurity <= THRESHOLDS[1]), "Tuple value comparison error"
+                
+#                 viability_score = fltpurity + len(row["Sequence"])
+#                 row["Viability"] = viability_score 
+                
+#                 valid_samples.append(row)
+#                 viability_scores.append(viability_score)
+                
+#             except (AssertionError, ValueError) as err:
+#                 pass
+            
+#     sorted_items = sorted(valid_samples, key=lambda item: item['Viability'], reverse=True)
+
+#     with open("approved_samples.csv", "w", newline="") as writefile:
+#         header = ["SampleID", "Sequence", "Purity", "VisualScan", "Viability"]
+#         writer = csv.DictWriter(writefile, fieldnames=header)
+#         writer.writeheader()
+#         writer.writerows(sorted_items)
+        
+#     opened_images = []
+#     for j in sorted_items:
+#         try:
+#             img = Image.open(j['VisualScan'])
+#             opened_images.append(img)
+#         except FileNotFoundError:
+#             pass
+            
+#     if len(opened_images) >= 1:
+#         opened_images[0].save(
+#             "synthesis.gif",
+#             save_all=True,
+#             append_images=opened_images[1:],
+#             duration=500,
+#             loop=0
+#         )
+        
+#     print(f"Total number of approved samples: {len(valid_samples)}")
+#     if viability_scores:
+#         print(f"Average viability score: {statistics.mean(viability_scores)}")
+
+# MasterQuestion3()
