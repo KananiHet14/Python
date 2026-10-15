@@ -1,0 +1,8 @@
+DroneID,RouteCode,PowerDrain,FlightTime,DashCam
+DRN-1024,LAX-99,40.5,10.0,promo1.png
+DRN-007,MIA-01,50.0,5.0,promo2.png
+DRX-9999,JFK-02,30.0,10.0,promo3.png
+DRN-2048,ORD-5,60.0,12.0,promo4.png
+DRN-3012,ATL-11,Error,8.0,promo5.png
+DRN-4096,DFW-22,25.0,0.0,promo1.png
+DRN-8192,SFO-33,90.0,10.0,promo4.png
