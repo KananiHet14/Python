@@ -1621,79 +1621,79 @@ from PIL import Image
 
 # master question 4
 
-def masterquestion4():
-    if len(sys.argv) < 2:
-        sys.exit("Please enter a PIN.")
+# def masterquestion4():
+#     if len(sys.argv) < 2:
+#         sys.exit("Please enter a PIN.")
 
-    try:
-        pin = int(sys.argv[1])
-    except ValueError:
-        sys.exit("You entered wrong input. Numbers only.")
+#     try:
+#         pin = int(sys.argv[1])
+#     except ValueError:
+#         sys.exit("You entered wrong input. Numbers only.")
 
-    if ((pin ^ 64) != 0):
-        sys.exit("Access Denied")
+#     if ((pin ^ 64) != 0):
+#         sys.exit("Access Denied")
 
-    POWER_LIMITS = (20.0, 85.5)
+#     POWER_LIMITS = (20.0, 85.5)
     
-    efficiency_list = []
-    valid_fleet = []
+#     efficiency_list = []
+#     valid_fleet = []
 
-    with open("drone_logs.csv", "r") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            DroneIdPattern = r"^DRN-\d{4}$"
-            RoutCodePattern = r"^[A-Z]{3}-\d{2}$"
+#     with open("drone_logs.csv", "r") as file:
+#         reader = csv.DictReader(file)
+#         for row in reader:
+#             DroneIdPattern = r"^DRN-\d{4}$"
+#             RoutCodePattern = r"^[A-Z]{3}-\d{2}$"
             
-            if not re.search(DroneIdPattern, row['DroneID']) or not re.search(RoutCodePattern, row['RouteCode']):
-                continue
+#             if not re.search(DroneIdPattern, row['DroneID']) or not re.search(RoutCodePattern, row['RouteCode']):
+#                 continue
                 
-            try:
-                power_drain = float(row['PowerDrain'])
-                flight_time = float(row['FlightTime'])
-            except ValueError:
-                continue 
+#             try:
+#                 power_drain = float(row['PowerDrain'])
+#                 flight_time = float(row['FlightTime'])
+#             except ValueError:
+#                 continue 
 
-            try:
-                assert power_drain >= POWER_LIMITS[0] and power_drain <= POWER_LIMITS[1], "Power limit error"
-                assert flight_time > 0, "Flight time error"
-            except AssertionError:
-                continue 
+#             try:
+#                 assert power_drain >= POWER_LIMITS[0] and power_drain <= POWER_LIMITS[1], "Power limit error"
+#                 assert flight_time > 0, "Flight time error"
+#             except AssertionError:
+#                 continue 
 
-            efficiency_score = power_drain / flight_time
-            row["Efficiency"] = efficiency_score
+#             efficiency_score = power_drain / flight_time
+#             row["Efficiency"] = efficiency_score
             
-            efficiency_list.append(efficiency_score)
-            valid_fleet.append(row)
+#             efficiency_list.append(efficiency_score)
+#             valid_fleet.append(row)
 
-    sorted_items = sorted(valid_fleet, key=lambda item: item['Efficiency'], reverse=False)
+#     sorted_items = sorted(valid_fleet, key=lambda item: item['Efficiency'], reverse=False)
 
-    with open("optimized_fleet.csv", "w", newline="") as writefile:
-        header = ["DroneID", "RouteCode", "PowerDrain", "FlightTime", "DashCam", "Efficiency"]
-        writer = csv.DictWriter(writefile, fieldnames=header)
-        writer.writeheader()
-        writer.writerows(sorted_items)
+#     with open("optimized_fleet.csv", "w", newline="") as writefile:
+#         header = ["DroneID", "RouteCode", "PowerDrain", "FlightTime", "DashCam", "Efficiency"]
+#         writer = csv.DictWriter(writefile, fieldnames=header)
+#         writer.writeheader()
+#         writer.writerows(sorted_items)
 
-    opened_images = []
-    for j in sorted_items:
-        try:
-            img = Image.open(j['DashCam'])
-            opened_images.append(img)
-        except FileNotFoundError:
-            pass
+#     opened_images = []
+#     for j in sorted_items:
+#         try:
+#             img = Image.open(j['DashCam'])
+#             opened_images.append(img)
+#         except FileNotFoundError:
+#             pass
             
-    if len(opened_images) >= 1:
-        opened_images[0].save(
-            "fleet_cam.gif",
-            save_all=True,
-            append_images=opened_images[1:],
-            duration=500,
-            loop=0
-        )
+#     if len(opened_images) >= 1:
+#         opened_images[0].save(
+#             "fleet_cam.gif",
+#             save_all=True,
+#             append_images=opened_images[1:],
+#             duration=500,
+#             loop=0
+#         )
                  
-    if efficiency_list:
-        avg = statistics.mean(efficiency_list)     
-        print(f"Your average efficiency is {avg} and successful flights are {len(valid_fleet)}")
-        status = "STATUS : OPTIMAL" if avg < 5.0 else "STATUS : HIGH CONSUMPTION"
-        print(status)
+#     if efficiency_list:
+#         avg = statistics.mean(efficiency_list)     
+#         print(f"Your average efficiency is {avg} and successful flights are {len(valid_fleet)}")
+#         status = "STATUS : OPTIMAL" if avg < 5.0 else "STATUS : HIGH CONSUMPTION"
+#         print(status)
 
-masterquestion4()
+# masterquestion4()
