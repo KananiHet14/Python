@@ -41,17 +41,14 @@ return = The return statement is used to return the value of the expression back
 def defaultargument(a=10 , b=7):
     print(f"average is : {(a+b)/2}")
 defaultargument()
-
 # Keyword Argument
 def keywordargument(b=20 , a=7):
     print(f"average is : {(a+b)/2}")
 keywordargument()
-
 # Required Argument
 def requuiredargument(a , b , c=10):
     print(f"average is : {(a+b+c)/3}")
 requuiredargument(20,10)
-
 # Variable Length Argument [Arbitrary Arguments]
 def arbitraryargument(*numbers):
     sum = 0
@@ -59,13 +56,11 @@ def arbitraryargument(*numbers):
         sum = sum + i
     print(f"Average is : {sum/len(numbers)}")
 arbitraryargument(5,6)
-
 # Varialble Length Argument [Keyword Arbitrary Argument]
 def KeywordArbitraryArgument(**name):
     print("hello" , name["fname"] , name["mname"] , name["lname"])
     print(type(name))
 KeywordArbitraryArgument(mname = "het" , lname = "nileshbhai" , fname = "kanani")
-
 # Return
 def arbitraryargument(*numbers):
     sum = 0
@@ -74,3 +69,28 @@ def arbitraryargument(*numbers):
     return sum/len(numbers)
 c = arbitraryargument(5,6)
 print(c)
+
+
+# Docstring
+"""
+docstrings are the string literals that appear right after the defination of a function , method , class or modules.
+pep8[PEP = python enhancement proposal] = is a document that provides guidelines and best practice on how to write the python code.
+"""
+def square(n):
+    '''takes in a number n , return the square of n'''
+    print(n**2)
+square(5)
+print(square.__doc__)
+
+
+# Recursion
+"""
+recursion = function called its self.
+"""
+def factorial(n):
+    if(n==0 or n==1):
+        return 1
+    else:
+        return n*factorial(n-1)
+n = int(input("Enter a number n : "))
+print(f"your entered number is {n} and your {n} number factorial is {factorial(n)}")
