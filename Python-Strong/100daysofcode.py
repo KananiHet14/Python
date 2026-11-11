@@ -108,3 +108,16 @@ start = used to change the starting index
 #     if(index == 3):
 #         print("het")
 #     index += 1
+
+
+# Virtual environment
+"""
+is a tool used to isolate specific python environments on a single machine and also allowing you to work on multiple projects with different
+dependencies and packages without conflictts.
+how to make virtual environment :
+1. make a empyt folder
+2. open created folder in terminal
+3. use this command for windows "python -m venv myenv"
+4. for active virtual environment use this command " .\myenv\Scripts\activate"
+5. for deactive "deactive"
+""" 
